@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1793854918.49348 "/home/rozyelayny/Documentos/projetoAM/main.tex" "main.pdf" "main" 1793854918.84785 0
+["pdflatex"] 1793855188.23824 "/home/rozyelayny/Documentos/projetoAM/main.tex" "main.pdf" "main" 1793855188.5938 0
   "/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1793852951.58554 77343 ba1a2c38124606515bc36da6e6040603 ""
   "/home/rozyelayny/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1776974193.23521 10149832 3abc5591ac265481d67ecaa96191dffb ""
   "/home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1777486873.64597 1004 54797486969f23fa377b128694d548df ""
@@ -71,9 +71,9 @@
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/setspace/setspace.sty" 1776977134.23903 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/tools/calc.sty" 1777486879.34727 10374 2ffd4f27c7f90b8a300608069537743c ""
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/url/url.sty" 1777486862.86666 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "/home/rozyelayny/Documentos/projetoAM/main.tex" 1793854917.81547 1196 cbf7c581bfcfa067abaec13eb424c64d ""
-  "main.aux" 1793854918.76452 1133 3e90288cf68373c8cc75e4186c3c8a57 "pdflatex"
-  "main.tex" 1793854917.81547 1196 cbf7c581bfcfa067abaec13eb424c64d ""
+  "/home/rozyelayny/Documentos/projetoAM/main.tex" 1793855187.94983 1169 6915c5f87556f582678e6fac64eb94ce ""
+  "main.aux" 1793855188.50685 1133 3e90288cf68373c8cc75e4186c3c8a57 "pdflatex"
+  "main.tex" 1793855187.94983 1169 6915c5f87556f582678e6fac64eb94ce ""
   (generated)
   "main.aux"
   "main.log"

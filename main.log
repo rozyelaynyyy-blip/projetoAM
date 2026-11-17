@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 15:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 15:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -614,15 +614,15 @@ L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8756 strings out of 469628
- 139865 string characters out of 5466582
+ 8754 strings out of 469628
+ 139849 string characters out of 5466582
  599936 words of memory out of 5000000
  37049 multiletter control sequences out of 15000+600000
- 648065 words of font info for 208 fonts, out of 8000000 for 9000
+ 648016 words of font info for 207 fonts, out of 8000000 for 9000
  162 hyphenation exceptions out of 8191
  71i,13n,79p,1039b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk> </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (17 pages, 1582859 bytes).
+Output written on main.pdf (17 pages, 1582766 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

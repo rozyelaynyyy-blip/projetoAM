@@ -1,6 +1,6 @@
 PWD /home/rozyelayny/Documentos/projetoAM
 INPUT /home/rozyelayny/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT /home/rozyelayny/Documentos/projetoAM/main.tex
+INPUT main.tex
 OUTPUT main.log
 INPUT /home/rozyelayny/.miktex/texmfs/install/tex/latex/amscls/amsart.cls
 INPUT /home/rozyelayny/.miktex/texmfs/install/tex/latex/amscls/amsart.cls
@@ -166,7 +166,6 @@ OUTPUT main.pdf
 INPUT /home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map
 INPUT /home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/cm/cmbx6.tfm
-INPUT /home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/cm/cmcsc10.tfm
 INPUT /home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/cm/cmbxti10.tfm
 INPUT /home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/cm/cmmi10.tfm
 INPUT /home/rozyelayny/.miktex/texmfs/install/fonts/tfm/public/cm/cmsy10.tfm

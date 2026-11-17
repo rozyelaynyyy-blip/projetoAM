@@ -41,8 +41,8 @@ Este trabalho aplica o double k-means à base \emph{Spambase} e compara cinco cl
 nessa base. A silhueta indicou $K^*=2$ grupos (0,660), mas a partição apenas isolou 34 e-mails
 legítimos ligados à HP Labs e não reproduziu a divisão spam $\times$ não-spam (índice de Rand
 corrigido $\approx 0$). Na classificação, avaliada por validação cruzada $30\times10$-folds e
-testes de Friedman e Nemenyi, o voto majoritário foi o melhor (6,55\% de erro) e o bayesiano
-gaussiano o pior (17,67\%). Os resultados mostram que um índice interno alto não garante
+pelos testes de Friedman e Nemenyi, o voto majoritário teve o menor erro (6,55\%) e o bayesiano
+gaussiano, o maior (17,67\%). Os resultados mostram que um índice interno alto não garante
 concordância com as classes conhecidas.
 
 \end{abstract}
@@ -76,13 +76,13 @@ Este projeto foi construído em duas partes partes principais. Na Questão~1, o 
 com $K\in\{2,3,4\}$ grupos de objetos e $H\in\{1,\dots,K\}$ grupos de variáveis, com 100
 execuções por par $(K,H)$. O número de grupos $K^*$ foi escolhido pelo índice de silhueta, e a
 partição obtida foi comparada à classe real pelo índice de Rand corrigido, pela matriz de
-protótipos e pela matriz de confusão. Na Questão~2, os classificadores
-bayesiano gaussiano, bayesiano baseado em k-vizinhos, bayesiano baseado em janela de Parzen,
-regressão logística e voto majoritário foram comparados em duas versões da base: com a classe
-original e com a classe definida pelos grupos de $K^*$. A avaliação usou validação cruzada
-estratificada $30\times10$-folds com ajuste de hiper-parâmetros por validação cruzada interna,
-intervalos de confiança, os testes de Friedman e Nemenyi \cite{demsar2006} e curvas de
-aprendizagem. Os experimentos foram implementados em Python, com PyTorch, e executados em GPU no
+protótipos e pela matriz de confusão. Na Questão~2, comparamos cinco classificadores
+(bayesiano gaussiano, bayesiano baseado em k-vizinhos, bayesiano baseado em janela de Parzen,
+regressão logística e voto majoritário) em duas versões da base: uma com a classe original e
+outra com a classe definida pelos grupos encontrados com $K^*$. A avaliação foi feita por
+validação cruzada estratificada $30\times10$-folds, com ajuste de hiper-parâmetros por validação
+cruzada interna, e complementada por intervalos de confiança, pelos testes de Friedman e Nemenyi
+\cite{demsar2006} e por curvas de aprendizagem. Os experimentos foram implementados em Python, com PyTorch, e executados em GPU no
 cluster do CIn/UFPE. O documento está organizado de maneira que a Seção~2 descreve o double k-means, a
 Seção~3, a base de dados, a Seção~4 as respostas às questões e a Seção~5 discute os
 resultados.
@@ -189,8 +189,8 @@ soma dos comprimentos das sequências contínuas de letras maiúsculas. \\
 
 
 Algumas características da base é interessante ressaltar, há um desbalanceamento moderado, são 1813 \emph{spams} (39,4\%) e 2788
-\emph{e-mails} legítimos (60,6\%). Por isso todas as divisões em treino e teste da Questão~2 usam
-amostragem estratificada, que preserva essas proporções. 77,4\% dos valores da matriz de dados são zero, já que cada e-mail usa poucas das 48 palavras monitoradas. Das 57 variáveis, 46 têm mais de 70\% de zeros e 19 têm mais de 90\%.
+\emph{e-mails} legítimos (60,6\%). Por isso, todas as divisões em treino e teste da Questão~2 usam
+amostragem estratificada, que mantém essa proporção em cada parte. 77,4\% dos valores da matriz de dados são zero, já que cada e-mail usa poucas das 48 palavras monitoradas. Das 57 variáveis, 46 têm mais de 70\% de zeros e 19 têm mais de 90\%.
 As escalas também são muito diferentes, as frequências são percentuais e ficam entre 0 e 100 (na maioria das
   vezes abaixo de 1), enquanto os atributos de maiúsculas chegam a milhares. Por exemplo,
   \texttt{capital\_run\_length\_total} tem mediana 95 e máximo 15\,841.
@@ -232,8 +232,9 @@ Atributo & Não-spam & Spam \\
 
 Por causa das escalas tão diferentes, todos os atributos foram padronizados, \emph{z-score}:
 média zero e desvio-padrão um. Na Questão~1, que é não supervisionada, a padronização usa a
-base inteira. Na Questão~2, a média e o desvio são estimados apenas no conjunto de treinamento
-de cada fold e depois aplicados ao teste, para não vazar informação do teste para o modelo.
+base inteira. Na Questão~2, a média e o desvio-padrão são estimados apenas no conjunto de
+treinamento de cada fold e depois aplicados ao teste, de modo que nenhuma informação do teste
+chegue ao modelo.
 Nenhum atributo ou registro foi removido.
 
 
@@ -374,66 +375,92 @@ compactos e esféricos, numa base esparsa e
 muito assimétrica. Também mostra que um índice interno alto, a silhueta, não garante concordância
 com as classes conhecidas.
 
-\subsection{Questão 2:}
+\subsection{Questão 2}
 
 \subsubsection*{Versões da base}
 \begin{itemize}
-\item \textbf{V1 (original):} classe \texttt{is\_spam}, 2 classes a priori (2788 não-spam e 1813 spam);
-\item \textbf{V2 (clusters):} classe igual ao grupo do double k-means com $K^*=2$ (Questão~1),
-  com 4567 e 34 exemplos.
+\item \textbf{V1 (original):} classe \texttt{is\_spam}, com as 2 classes a priori (2788
+  não-spam e 1813 spam);
+\item \textbf{V2 (clusters):} classe dada pelo grupo do double k-means com $K^*=2$
+  (Questão~1), com 4567 e 34 exemplos.
 \end{itemize}
 
 \subsubsection*{Classificadores}
-Em todos os classificadores bayesianos, $x_k$ é atribuído à classe de maior posteriori
+Nos três classificadores bayesianos, um exemplo $x_k$ é atribuído à classe de maior
+probabilidade a posteriori,
 $P(\omega_i\mid x_k)=p(x_k\mid\omega_i)P(\omega_i)/\sum_{r}p(x_k\mid\omega_r)P(\omega_r)$, com
-$P(\omega_i)=n_i/n$ (máxima verossimilhança).
+$P(\omega_i)=n_i/n$ (estimativa de máxima verossimilhança). O que muda de um para outro é a
+forma de estimar $p(x_k\mid\omega_i)$.
 \begin{enumerate}
-\item[(i)] \textbf{Bayesiano gaussiano:} $p(x_k\mid\omega_i)$ normal multivariada com
-  $\hat\mu_i$ e $\hat\Sigma_i$ de máxima verossimilhança. Como alguns atributos são quase
-  constantes dentro de uma classe, somou-se $10^{-3}I$ a $\hat\Sigma_i$ para que ela seja inversível.
+\item[(i)] \textbf{Bayesiano gaussiano:} $p(x_k\mid\omega_i)$ é uma normal multivariada, com
+  $\hat\mu_i$ e $\hat\Sigma_i$ estimados por máxima verossimilhança. Como alguns atributos são
+  quase constantes dentro de uma classe, $\hat\Sigma_i$ pode ser singular. Na V2 isso é
+  inevitável: a classe minoritária tem cerca de 31 exemplos de treino para 57 atributos, e uma
+  covariância estimada com menos exemplos do que atributos nunca tem posto completo. Por isso
+  somamos $10^{-3}I$ à matriz, um valor pequeno perto das variâncias (da ordem de 1 nos dados
+  padronizados), mas suficiente para invertê-la.
 \item[(ii)] \textbf{Bayesiano k-vizinhos:} $P(\omega_i\mid x)=k_i/k$, em que $k_i$ é o número de
-  vizinhos da classe $\omega_i$ entre os $k$ mais próximos. Hiper-parâmetros: distância
-  (Euclidiana, City-Block ou Chebyshev) e $k\in\{1,3,\dots,31\}$.
-\item[(iii)] \textbf{Bayesiano janela de Parzen:} kernel multivariado produto de gaussianas
-  univariadas,
+  vizinhos da classe $\omega_i$ entre os $k$ mais próximos. Os hiper-parâmetros são a distância
+  (Euclidiana, City-Block ou Chebyshev) e $k\in\{1,3,\dots,31\}$. Só usamos $k$
+  ímpar, para não haver empate entre as duas classes. Paramos em 31 porque, na V2, a classe
+  minoritária tem cerca de 24 exemplos em cada treino da validação interna, e com vizinhanças bem
+  maiores ela dificilmente seria maioria.
+\item[(iii)] \textbf{Bayesiano janela de Parzen:} a densidade de cada classe é estimada com um
+  kernel multivariado produto de gaussianas univariadas,
   $p(x\mid\omega_i)=\frac{1}{n_i}\sum_{l\in\omega_i}\prod_{j=1}^{d}\frac{1}{h}\varphi\!\left(\frac{x_j-x_{lj}}{h}\right)$.
-  Hiper-parâmetro: $h$, em 24 valores log-espaçados entre 0,1 e 20.
-\item[(iv)] \textbf{Regressão logística:} multinomial com regularização L2. Hiper-parâmetro:
-  $C\in\{10^{-3},10^{-2},\dots,10^{4}\}$.
-\item[(v)] \textbf{Voto majoritário:} combina as predições de (i)--(iv). Em caso de empate,
-  vence a classe de maior posteriori média.
+  O único hiper-parâmetro é a largura $h$, buscada entre 24 valores de 0,1 a 20, espaçados
+  em escala logarítmica porque não sabíamos a ordem de grandeza certa. Como os atributos estão
+  padronizados, $h=0{,}1$ é uma janela de um décimo de desvio-padrão, quase memorizando o treino,
+  enquanto com $h=20$ a densidade fica quase plana e a decisão passa a depender praticamente só
+  da priori. Não usamos mais valores porque cada um exige recalcular as densidades em todos os
+  folds internos.
+\item[(iv)] \textbf{Regressão logística:} multinomial (o que, com duas classes, equivale à
+  logística binária), com regularização L2. O hiper-parâmetro é o inverso da força de
+  regularização, $C\in\{10^{-3},10^{-2},\dots,10^{4}\}$. Sem regularização, os coeficientes
+  explodiriam na V2, em que as classes são quase separáveis. Escolhemos a L2, e não a L1, porque
+  ela não zera coeficientes e se comporta melhor com atributos correlacionados, como
+  \texttt{hp}, \texttt{hpl} e \texttt{labs}. A grade tem um valor por ordem de grandeza, de uma
+  regularização tão forte que deixa os coeficientes perto de zero ($10^{-3}$) até uma que quase
+  não age ($10^{4}$).
+\item[(v)] \textbf{Voto majoritário:} cada um dos classificadores (i)--(iv) vota em uma classe, e
+  vence a mais votada. Com quatro votantes pode dar 2 a 2, e aí desempatamos pela
+  maior posteriori média dos quatro, em vez de sortear.
 \end{enumerate}
 
 \subsubsection*{Organização dos experimentos}
-Para comparar os classificadores, usamos validação cruzada estratificada $30\times10$-folds. Em
-cada uma das 30 repetições, com uma semente diferente, a base foi dividida em 10 folds que
-preservam a proporção das classes. Cada fold serviu uma vez como teste, enquanto os outros 9
-formaram o conjunto de aprendizagem, o que resulta em 300 avaliações de cada classificador em cada
-versão da base. Usamos exatamente as mesmas partições para os cinco classificadores. Dessa forma,
-em cada repetição todos são testados nos mesmos e-mails, condição necessária para os testes de
-Friedman e Nemenyi, que comparam medidas pareadas.
+A comparação foi feita por validação cruzada estratificada $30\times10$-folds. Em cada uma das 30
+repetições, com uma semente diferente, a base foi dividida em 10 folds que preservam a proporção
+das classes. Cada fold foi usado uma vez como teste, com os outros 9 formando o conjunto de
+aprendizagem, o que dá 300 avaliações de cada classificador em cada versão da base. As mesmas
+partições foram usadas para os cinco classificadores, de modo que, em cada repetição, todos são
+testados exatamente nos mesmos e-mails. Isso é necessário para os testes de Friedman e Nemenyi,
+que comparam medidas pareadas.
 
 Os hiper-parâmetros do k-NN, da janela de Parzen e da regressão logística foram escolhidos sem
-usar o fold de teste. Dentro dos 9 folds de aprendizagem, rodamos uma validação cruzada
+tocar no fold de teste. Dentro dos 9 folds de aprendizagem, rodamos uma validação cruzada
 estratificada 5-folds para cada combinação de valores e ficamos com a de maior F-measure média.
-Em seguida, treinamos o modelo novamente nos 9 folds com os valores escolhidos e só então o
-avaliamos no fold de teste. Adotamos a F-measure como critério de ajuste, em vez da taxa de erro,
-porque as classes são desbalanceadas (39\% de spam na V1 e apenas 34 exemplos na classe
-minoritária da V2), e a taxa de erro tende a favorecer modelos que vão bem apenas na classe
-majoritária.
+Depois, o modelo foi treinado de novo nos 9 folds com os valores escolhidos e só então avaliado
+no fold de teste. O bayesiano gaussiano não tem hiper-parâmetros a ajustar, e o voto majoritário
+usa os quatro modelos já ajustados.
 
-Com o mesmo cuidado, a padronização \emph{z-score} foi calculada só com os dados de treinamento de
-cada etapa, nos folds internos e nos externos, e depois aplicada ao conjunto de validação ou de
-teste correspondente. Assim, a média e o desvio-padrão do teste nunca entram no modelo.
+Usamos a F-measure como critério de ajuste, e não a taxa de erro, por causa do desbalanceamento
+(39\% de spam na V1 e apenas 34 exemplos na classe minoritária da V2). Na V2, por exemplo,
+classificar tudo como $P_1$ já daria menos de 1\% de erro.
 
-Avaliamos os classificadores pela taxa de erro, precisão, cobertura e F-measure. Na V1, a classe
-positiva é spam, que é a classe de interesse em um filtro. Na V2 não há uma classe positiva
-natural, então calculamos a média \emph{macro} entre os dois grupos, que dá o mesmo peso a cada
-grupo independentemente do tamanho.
+A padronização \emph{z-score} seguiu o mesmo cuidado: foi calculada apenas com os dados de
+treinamento de cada etapa, tanto nos folds internos quanto nos externos, e depois aplicada ao
+conjunto de validação ou de teste correspondente. Assim, a média e o desvio-padrão do teste nunca
+entram no modelo.
+
+Os classificadores foram avaliados pela taxa de erro, precisão, cobertura e F-measure. Na V1,
+tomamos spam como classe positiva, já que é a classe de interesse em um filtro. Na V2 não há uma
+classe positiva natural, então usamos a média \emph{macro} entre os dois grupos, que dá o mesmo
+peso a cada um independentemente do tamanho. Se usássemos a média ponderada pelo tamanho, o grupo
+de 34 e-mails praticamente não influenciaria as métricas.
 
 \subsubsection*{Hiper-parâmetros selecionados}
-A Tabela~\ref{tab:hp} mostra os valores mais escolhidos nos 300 folds externos. A
-Figura~\ref{fig:hp} mostra a F-measure média da validação interna para cada valor.
+A Tabela~\ref{tab:hp} traz os valores escolhidos com mais frequência nos 300 folds externos, e a
+Figura~\ref{fig:hp} mostra a F-measure média da validação interna para cada valor testado.
 
 \begin{table}[H]
 \centering
@@ -461,11 +488,14 @@ Reg. logística & $C=10$ (122); $C=100$ (95) & $C=0{,}1$ (176); $C=1$ (120) \\
 \end{figure}
 
 \subsubsection*{(b) Estimativas pontuais e intervalos de confiança}
-Para cada classificador e métrica, a média dos 10 folds de cada repetição dá 30 valores. A
-estimativa pontual é a média desses 30 valores, e o intervalo de confiança de 95\% é
-$\bar m \pm t_{0{,}975;29}\, s/\sqrt{30}$. Usam-se as médias por repetição porque os folds de uma
-mesma repetição compartilham dados de treino e não são independentes. Os resultados estão nas
-Tabelas~\ref{tab:icv1} e~\ref{tab:icv2} e na Figura~\ref{fig:ic}.
+Para cada classificador e métrica, calculamos a média dos 10 folds de cada repetição, o que dá
+30 valores. A estimativa pontual é a média desses 30 valores, e o intervalo de confiança de 95\%
+é $\bar m \pm t_{0{,}975;29}\, s/\sqrt{30}$. Trabalhamos com as médias por repetição, e não com
+os 300 folds, porque os folds de uma mesma repetição compartilham dados de treino e não são
+independentes; tratá-los como 300 observações independentes estreitaria artificialmente o
+intervalo. Usamos a distribuição $t$ porque o desvio-padrão $s$ é estimado a partir de apenas 30
+valores. Os resultados estão nas Tabelas~\ref{tab:icv1} e~\ref{tab:icv2} e na
+Figura~\ref{fig:ic}.
 
 \begin{table}[H]
 \centering
@@ -510,20 +540,29 @@ Voto majoritário & \textbf{0,0004} [0,0003; 0,0005] & 0,9807 [0,9782; 0,9832] &
 \label{fig:ic}
 \end{figure}
 
-Na V1, o voto majoritário tem a menor taxa de erro (6,55\%) e a maior F-measure (0,917), seguido
-pela regressão logística, Parzen e k-NN. O bayesiano gaussiano é o pior em erro (17,7\%), mas tem
-a maior cobertura (0,950) com precisão baixa (0,705): ele classifica muitos e-mails legítimos
-como spam, porque a hipótese de normalidade é ruim para atributos esparsos e de cauda pesada. Na
-V2 a tarefa é muito mais fácil, porque as classes foram definidas pelo próprio agrupamento a
-partir de um grupo extremo em poucas variáveis. O erro fica abaixo de 0,1\% para todos os
-classificadores, exceto o gaussiano (4,6\%; F-measure 0,587): estimar uma matriz de covariância
-$57\times57$ com cerca de 31 exemplos de treino da classe minoritária é mal condicionado.
+Na V1, o voto majoritário tem a menor taxa de erro (6,55\%) e a maior F-measure (0,917),
+seguido pela regressão logística, por Parzen e pelo k-NN. O bayesiano gaussiano tem o maior erro
+(17,7\%), mas também a maior cobertura (0,950), à custa de uma precisão baixa (0,705). Em outras
+palavras, ele marca como spam muitos e-mails legítimos. Isso é o que se espera de uma hipótese de
+normalidade aplicada a atributos esparsos e de cauda pesada.
+
+Na V2, a tarefa é bem mais fácil, porque as classes foram definidas pelo próprio agrupamento, a
+partir de um grupo extremo em poucas variáveis. Todos os classificadores erram menos de 0,1\%,
+com exceção do gaussiano (4,6\% de erro e F-measure 0,587). No caso dele, o problema é ter de
+estimar uma matriz de covariância $57\times57$ com cerca de 31 exemplos de treino da classe
+minoritária, uma estimativa mal condicionada.
 
 \subsubsection*{(c) Teste de Friedman e pós-teste de Nemenyi}
-Para cada versão e métrica, os blocos são as 30 repetições e os tratamentos são os 5
-classificadores, seguindo a metodologia de \citeonline{demsar2006}. O posto 1 indica o melhor
-classificador. A diferença crítica de Nemenyi
-($\alpha=0{,}05$, $k=5$, $N=30$) é $CD=q_\alpha\sqrt{k(k+1)/(6N)}=1{,}114$.
+Seguimos a metodologia de \citeonline{demsar2006}. Para cada versão da base e cada métrica, os
+blocos são as 30 repetições e os tratamentos são os 5 classificadores. Em cada repetição, os
+classificadores são ordenados, com posto 1 para o melhor, e o teste compara os postos médios. Por
+trabalhar com postos, o teste de Friedman não supõe que as métricas sigam uma distribuição
+normal nem que tenham a mesma variância entre classificadores, o que é adequado aqui: métricas
+como a taxa de erro da V2 ficam espremidas perto de zero e têm distribuição bem assimétrica.
+Quando o Friedman rejeita a hipótese de igualdade, o pós-teste de Nemenyi indica quais pares
+diferem: dois classificadores são considerados diferentes se seus postos médios se afastam mais
+do que a diferença crítica, que para $\alpha=0{,}05$, $k=5$ e $N=30$ é
+$CD=q_\alpha\sqrt{k(k+1)/(6N)}=1{,}114$.
 
 \begin{table}[H]
 \centering
@@ -548,21 +587,22 @@ Base & Métrica & $\chi^2_F$ & $p$-valor & Gaussiano & k-NN & Parzen & Reg. log.
 \end{table}
 
 O teste de Friedman rejeita a hipótese de desempenhos equivalentes em todas as métricas e nas
-duas versões ($p<10^{-18}$). Resultados do pós-teste de Nemenyi (Figuras~\ref{fig:nemenyi}
-e~\ref{fig:postos}):
-\begin{itemize}
-\item \textbf{V1, taxa de erro e F-measure:} a ordem voto $<$ reg. logística $<$ Parzen $<$
-  k-NN $<$ gaussiano é a mesma nas 30 repetições. Classificadores vizinhos nessa ordem não
-  diferem significativamente (diferença de posto 1,0 $<$ CD; $p=0{,}10$). Pares a duas ou mais
-  posições de distância diferem ($p<0{,}001$): por exemplo, o voto supera Parzen, k-NN e
-  gaussiano, e a regressão logística supera k-NN e gaussiano.
-\item \textbf{V1, precisão:} regressão logística e voto formam o melhor grupo (sem diferença
-  entre si, $p=0{,}18$) e superam os demais. \textbf{Cobertura:} o gaussiano é o melhor, sem
-  diferença significativa para o voto ($p=0{,}10$).
-\item \textbf{V2:} voto e Parzen não diferem entre si em nenhuma métrica ($p\ge0{,}90$) e superam
-  k-NN e gaussiano. Na F-measure, o voto também supera a regressão logística ($p=0{,}005$). O
-  gaussiano é significativamente o pior em todas as métricas.
-\end{itemize}
+duas versões da base ($p<10^{-18}$). Os resultados do pós-teste de Nemenyi estão nas
+Figuras~\ref{fig:nemenyi} e~\ref{fig:postos}.
+
+Na V1, a taxa de erro e a F-measure produzem a mesma ordem em todas as 30 repetições: voto,
+regressão logística, Parzen, k-NN e gaussiano. Como cada classificador fica sempre uma posição
+atrás do anterior, a diferença de posto entre vizinhos é exatamente 1,0, abaixo da diferença
+crítica, e esses pares não diferem significativamente ($p=0{,}10$). Já os pares separados por
+duas ou mais posições diferem ($p<0{,}001$); o voto, por exemplo, supera Parzen, k-NN e
+gaussiano, e a regressão logística supera k-NN e gaussiano. Na precisão, regressão logística e
+voto formam o melhor grupo, sem diferença entre si ($p=0{,}18$), e superam os demais. Na
+cobertura, o gaussiano fica em primeiro, mas sem diferença significativa para o voto
+($p=0{,}10$).
+
+Na V2, voto e Parzen não diferem entre si em nenhuma métrica ($p\ge0{,}90$) e superam o k-NN e o
+gaussiano. Na F-measure, o voto também supera a regressão logística ($p=0{,}005$). O gaussiano é
+significativamente o pior em todas as métricas.
 
 \begin{figure}[H]
 \centering
@@ -579,11 +619,13 @@ e~\ref{fig:postos}):
 \end{figure}
 
 \subsubsection*{(d) Curvas de aprendizagem}
-Para proporções de treinamento de 5\% a 95\% (passo de 5\%), a base foi dividida em treino e
-teste por amostragem estratificada. Os classificadores usaram os hiper-parâmetros mais
-selecionados no item (a): na V1, City-Block com $k=1$, $h=0{,}50$ e $C=10$; na V2, Euclidiana
-com $k=1$, $h=0{,}10$ e $C=0{,}1$. Cada proporção foi repetida 5 vezes, e a Figura~\ref{fig:lc}
-mostra a F-measure média no treino e no teste.
+Para cada proporção de treinamento de 5\% a 95\% (com passo de 5\%), a base foi dividida em
+treino e teste por amostragem estratificada. Os hiper-parâmetros ficaram fixos nos valores mais
+escolhidos no item (a), que foram os mais estáveis entre os 300 folds: na V1, City-Block com
+$k=1$, $h=0{,}50$ e $C=10$; na V2, Euclidiana com $k=1$, $h=0{,}10$ e $C=0{,}1$. Assim a curva
+mostra só o efeito do tamanho do treino, e evitamos ajustar hiper-parâmetros com apenas 5\% da
+base. Repetimos cada proporção 5 vezes para não depender de uma única divisão. A Figura~\ref{fig:lc} mostra
+a F-measure média no treino e no teste.
 
 \begin{figure}[H]
 \centering
@@ -592,25 +634,26 @@ mostra a F-measure média no treino e no teste.
 \label{fig:lc}
 \end{figure}
 
-\begin{itemize}
-\item \textbf{V1:} k-NN e Parzen têm F-measure de treino próxima de 1, porque com $k=1$ e $h$
-  pequeno eles memorizam o treino. A F-measure de teste cresce com o tamanho do treino (de 0,76
-  para 0,89 no k-NN e de 0,78 para 0,91 no Parzen): são modelos de \textbf{alta variância}, que
-  melhoram com mais dados. A regressão logística tem treino e teste próximos ($\approx0{,}91$ a
-  partir de 25\%), ou seja, baixa variância. O gaussiano fica estável em $\approx0{,}81$ no treino
-  e no teste: \textbf{alto viés}, e mais dados não o melhoram. Com treino grande, o voto
-  majoritário é o melhor no teste (0,920 com 95\%).
-\item \textbf{V2:} k-NN, Parzen e voto têm curvas praticamente iguais (de 0,94 para 0,98). A
-  regressão logística chega a 1,0 com 95\% de treino. O gaussiano piora à medida que o treino
-  cresce (de 0,81 para 0,56), coerente com a dificuldade de modelar a classe minoritária, muito
-  pequena e dispersa, por uma normal multivariada.
-\end{itemize}
+Na V1, o k-NN e o Parzen têm F-measure de treino próxima de 1, o que é esperado com $k=1$ e
+$h$ pequeno: os dois praticamente memorizam o conjunto de treino. No teste, a F-measure deles
+cresce com o tamanho do treino (de 0,76 para 0,89 no k-NN e de 0,78 para 0,91 no Parzen), o
+comportamento típico de modelos de alta variância, que ganham com mais dados. A regressão
+logística mostra treino e teste próximos ($\approx0{,}91$ a partir de 25\%), sinal de baixa
+variância. O gaussiano fica parado em torno de 0,81 tanto no treino quanto no teste, o que indica
+alto viés: o problema está na hipótese do modelo, e mais dados não o corrigem. Com treinos
+grandes, o voto majoritário é o melhor no teste (0,920 com 95\%).
+
+Na V2, as curvas do k-NN, do Parzen e do voto são praticamente iguais (de 0,94 para 0,98), e a
+regressão logística chega a 1,0 com 95\% de treino. O gaussiano, ao contrário, piora conforme o
+treino cresce (de 0,81 para 0,56). Isso é coerente com a dificuldade de representar a classe
+minoritária, muito pequena e dispersa, por uma normal multivariada.
 
 \subsubsection*{Observações}
 Os intervalos de confiança são estreitos porque cada um vem da média de 30 repetições do
-10-folds sobre a mesma base. Eles medem a variabilidade da divisão em folds, não a de amostrar
-novos conjuntos de dados. Na V2, o $h$ de Parzen mais escolhido foi o menor valor da grade
-(0,1). Como o erro já é próximo de zero, isso não deve alterar as conclusões.
+10-folds sobre a mesma base. Eles medem a variabilidade causada pela divisão em folds, e não a
+que surgiria ao amostrar novos conjuntos de e-mails. Na V2, o $h$ de Parzen escolhido com mais
+frequência foi o menor valor da grade (0,1). Como o erro já está próximo de zero, não esperamos
+que uma grade mais ampla mude as conclusões.
 
 \section{Discussão e Considerações Finais}
 
@@ -663,73 +706,73 @@ de imediato quais variáveis e quais objetos formam o bloco que distingue os gru
 
 \subsection*{Desempenho dos classificadores}
 Na base original (V1), a ordem dos classificadores foi a mesma em todas as 30 repetições: voto
-majoritário, regressão logística, Parzen, k-NN e gaussiano. Os resultados mais relevantes:
-\begin{itemize}
-\item \textbf{O voto majoritário foi o melhor.} Combinar classificadores com vieses diferentes
-  (um paramétrico linear, dois não paramétricos e um gaussiano) reduz os erros individuais. A
-  diferença para a regressão logística (0,77 ponto percentual de erro) não foi significativa no
-  Nemenyi, mas a vantagem sobre Parzen, k-NN e gaussiano foi.
-\item \textbf{A regressão logística foi o melhor classificador individual.} Ela é simples, tem
-  baixa variância e alcançou a maior precisão (0,923), o que é desejável em filtros de spam, onde
-  marcar um e-mail legítimo como spam custa caro.
-\item \textbf{Os métodos não paramétricos (k-NN e Parzen)} ficaram em posição intermediária. As
-  curvas de aprendizagem indicam alta variância: eles melhoram à medida que o treino cresce e
-  provavelmente se beneficiariam de mais dados ou de redução de dimensionalidade.
-\item \textbf{O bayesiano gaussiano foi o pior.} A hipótese de normalidade multivariada é
-  inadequada para atributos esparsos, limitados em zero e de cauda longa. Ele classifica spam
-  em excesso (cobertura de 0,950 com precisão de 0,705) e tem alto viés: o desempenho não melhora
-  com mais dados.
-\end{itemize}
+majoritário, regressão logística, Parzen, k-NN e gaussiano.
 
-Na versão com as classes vindas do agrupamento (V2), todos os classificadores, exceto o
-gaussiano, erram menos de 0,1\%. A tarefa é fácil porque as classes foram definidas pelo
-próprio double k-means a partir de um grupo extremo em poucas variáveis. Assim, os resultados da
-V2 mostram principalmente que a partição da Questão~1 é bem separada no espaço dos atributos.
-Eles não indicam que esses classificadores sejam bons para detectar spam. O mau desempenho do
-gaussiano na V2 vem do desbalanceamento extremo (4567 $\times$ 34): estimar uma covariância
-$57\times57$ com cerca de 31 exemplos é mal condicionado, mesmo com regularização.
+O voto majoritário teve o melhor desempenho. Uma explicação plausível é que ele combina modelos
+com vieses bem diferentes (um linear, dois não paramétricos e um paramétrico gaussiano), cujos
+erros nem sempre coincidem, e a votação corrige parte deles. A vantagem sobre a regressão
+logística, de 0,77 ponto percentual de erro, não foi significativa no Nemenyi; sobre Parzen, k-NN
+e gaussiano, foi. Entre os classificadores individuais, a regressão logística foi a melhor. Além
+de simples e de baixa variância, foi a que obteve maior precisão (0,923), uma qualidade
+importante em filtros de spam, onde mandar um e-mail legítimo para a caixa de spam costuma
+custar mais caro do que deixar passar um spam.
+
+O k-NN e o Parzen ficaram no meio da tabela. Pelas curvas de aprendizagem, os dois têm alta
+variância e continuam melhorando à medida que o treino cresce; é provável que se beneficiassem
+de mais dados ou de alguma redução de dimensionalidade. O bayesiano gaussiano ficou em último. A
+hipótese de normalidade multivariada é inadequada para atributos esparsos, limitados em zero e de
+cauda longa, e o modelo acaba classificando spam em excesso (cobertura de 0,950 com precisão de
+0,705). Como tem alto viés, seu desempenho também não melhora com mais dados.
+
+Na V2, com as classes vindas do agrupamento, todos os classificadores exceto o gaussiano erram
+menos de 0,1\%. A tarefa é fácil porque as classes foram definidas pelo próprio double k-means a
+partir de um grupo extremo em poucas variáveis. Esses resultados mostram, sobretudo, que a
+partição da Questão~1 é bem separada no espaço dos atributos, e não que os classificadores sejam
+bons para detectar spam. O desempenho ruim do gaussiano na V2 vem do desbalanceamento extremo
+(4567 $\times$ 34): estimar uma covariância $57\times57$ com cerca de 31 exemplos é um problema
+mal condicionado, mesmo com a regularização que adicionamos.
 
 \subsection*{Validade dos experimentos}
-O protocolo foi desenhado para que a avaliação e a comparação sejam justas:
-\begin{itemize}
-\item os hiper-parâmetros foram escolhidos só com os dados de aprendizagem (5-fold interno), e o
-  fold de teste nunca participou do ajuste nem da padronização;
-\item os 5 classificadores usaram exatamente as mesmas partições, o que permite testes
-  pareados (Friedman e Nemenyi);
-\item a amostragem estratificada preservou a proporção das classes em todas as divisões.
-\end{itemize}
+Planejamos o protocolo para que a avaliação e a comparação fossem justas. Os hiper-parâmetros
+foram escolhidos apenas com os dados de aprendizagem, pela validação interna 5-folds, e o fold de
+teste nunca participou do ajuste nem da padronização. Os cinco classificadores foram avaliados
+exatamente nas mesmas partições, o que permite usar testes pareados como Friedman e Nemenyi. E a
+amostragem estratificada manteve a proporção das classes em todas as divisões, o que é
+especialmente importante na V2, em que uma divisão não estratificada poderia deixar folds de
+teste sem nenhum exemplo da classe minoritária.
 
 \subsection*{Limitações}
-\begin{itemize}
-\item \textbf{Independência:} as 30 repetições usam a mesma base, então os intervalos de
-  confiança medem a variabilidade da divisão em folds, não a de novas amostras de e-mails.
-  Por isso são estreitos e devem ser lidos com cautela.
-\item \textbf{Grades de hiper-parâmetros:} na V2, o $h$ de Parzen mais escolhido foi o menor da
-  grade (0,1). Uma grade com valores menores poderia mudar ligeiramente o resultado, embora o erro
-  já esteja próximo de zero.
-\item \textbf{Pré-processamento:} usamos apenas a padronização z-score. Uma transformação como
-  $\log(1+x)$, que reduz a assimetria, poderia beneficiar tanto o double k-means quanto o
-  bayesiano gaussiano.
-\item \textbf{Registros duplicados:} as 391 linhas repetidas foram mantidas; elas podem cair ao
-  mesmo tempo no treino e no teste e favorecer levemente o k-NN com $k=1$.
-\end{itemize}
+As 30 repetições da validação cruzada usam a mesma base, então os intervalos de confiança medem
+a variabilidade causada pela divisão em folds, e não a que surgiria com novas amostras de
+e-mails; por isso são estreitos e devem ser lidos com cautela. Na V2, o $h$ de Parzen escolhido
+com mais frequência foi o menor valor da grade (0,1), o que sugere testar valores ainda menores,
+embora o erro já esteja perto de zero.
+
+No pré-processamento, usamos apenas a padronização z-score. Uma transformação como
+$\log(1+x)$, que reduz a assimetria, poderia beneficiar tanto o double k-means quanto o
+bayesiano gaussiano.
+
+Também mantivemos as 391 linhas duplicadas. Cópias de um mesmo e-mail podem cair ao mesmo tempo
+no treino e no teste, o que tende a favorecer levemente o k-NN com $k=1$, já que ele acerta
+qualquer exemplo idêntico a um do treino.
 
 \subsection*{Aspectos computacionais}
 O double k-means foi implementado em PyTorch com as 100 inicializações executadas em lote na
-GPU, o que levou cerca de 1~s por par $(K,H)$. O k-NN, a janela de Parzen e o bayesiano gaussiano
-também rodaram na GPU. O experimento completo (Questões 1 e 2) levou 42,6 minutos, a maior parte
-na validação cruzada com ajuste interno da regressão logística, executada em paralelo em 16 CPUs.
-Isso tornou viável o protocolo de 600 folds externos (300 por versão da base), cada um com
-validação interna de 5 folds.
+GPU, o que levou cerca de 1~s por par $(K,H)$. Na Questão~2, o k-NN, a janela de Parzen e o
+bayesiano gaussiano também rodaram na GPU, já que dependem do cálculo de distâncias ou
+densidades entre muitos pares de exemplos. O experimento completo (Questões 1 e 2) levou 42,6
+minutos. A maior parte desse tempo foi gasta na validação cruzada com ajuste interno da regressão
+logística, executada em paralelo em 16 CPUs. Com isso, foi possível rodar os 600 folds externos
+(300 por versão da base), cada um com validação interna de 5 folds, em tempo razoável.
 
 \subsection*{Considerações finais}
 Este trabalho aplicou o double k-means à base Spambase e comparou cinco classificadores em duas
 versões da base, com um protocolo experimental planejado para uma avaliação justa. No
 agrupamento, a silhueta indicou $K^*=2$, mas a partição isolou 34 e-mails internos da HP Labs e
 não reproduziu a divisão spam $\times$ não-spam, o que reforça a necessidade de validação externa.
-Na classificação, o voto majoritário foi o melhor nas duas versões da base e a regressão logística
-foi o melhor classificador isolado, enquanto o bayesiano gaussiano mostrou o custo de uma hipótese
-de modelo inadequada para dados esparsos e de cauda longa. Por fim, a validação cruzada aninhada,
+Na classificação, o voto majoritário teve o melhor desempenho nas duas versões da base, e a
+regressão logística foi o melhor classificador isolado. Já o bayesiano gaussiano deixou claro o
+custo de usar uma hipótese de modelo inadequada para dados esparsos e de cauda longa. Por fim, a validação cruzada aninhada,
 as partições pareadas e a implementação em GPU permitiram executar o protocolo completo, com 900
 execuções do double k-means e 600 folds externos com ajuste interno, em menos de uma hora.
 

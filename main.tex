@@ -391,41 +391,45 @@ probabilidade a posteriori,
 $P(\omega_i\mid x_k)=p(x_k\mid\omega_i)P(\omega_i)/\sum_{r}p(x_k\mid\omega_r)P(\omega_r)$, com
 $P(\omega_i)=n_i/n$ (estimativa de máxima verossimilhança). O que muda de um para outro é a
 forma de estimar $p(x_k\mid\omega_i)$.
-\begin{enumerate}
-\item[(i)] \textbf{Bayesiano gaussiano:} $p(x_k\mid\omega_i)$ é uma normal multivariada, com
-  $\hat\mu_i$ e $\hat\Sigma_i$ estimados por máxima verossimilhança. Como alguns atributos são
-  quase constantes dentro de uma classe, $\hat\Sigma_i$ pode ser singular. Na V2 isso é
-  inevitável: a classe minoritária tem cerca de 31 exemplos de treino para 57 atributos, e uma
-  covariância estimada com menos exemplos do que atributos nunca tem posto completo. Por isso
-  somamos $10^{-3}I$ à matriz, um valor pequeno perto das variâncias (da ordem de 1 nos dados
-  padronizados), mas suficiente para invertê-la.
-\item[(ii)] \textbf{Bayesiano k-vizinhos:} $P(\omega_i\mid x)=k_i/k$, em que $k_i$ é o número de
-  vizinhos da classe $\omega_i$ entre os $k$ mais próximos. Os hiper-parâmetros são a distância
-  (Euclidiana, City-Block ou Chebyshev) e $k\in\{1,3,\dots,31\}$. Só usamos $k$
-  ímpar, para não haver empate entre as duas classes. Paramos em 31 porque, na V2, a classe
-  minoritária tem cerca de 24 exemplos em cada treino da validação interna, e com vizinhanças bem
-  maiores ela dificilmente seria maioria.
-\item[(iii)] \textbf{Bayesiano janela de Parzen:} a densidade de cada classe é estimada com um
-  kernel multivariado produto de gaussianas univariadas,
-  $p(x\mid\omega_i)=\frac{1}{n_i}\sum_{l\in\omega_i}\prod_{j=1}^{d}\frac{1}{h}\varphi\!\left(\frac{x_j-x_{lj}}{h}\right)$.
-  O único hiper-parâmetro é a largura $h$, buscada entre 24 valores de 0,1 a 20, espaçados
-  em escala logarítmica porque não sabíamos a ordem de grandeza certa. Como os atributos estão
-  padronizados, $h=0{,}1$ é uma janela de um décimo de desvio-padrão, quase memorizando o treino,
-  enquanto com $h=20$ a densidade fica quase plana e a decisão passa a depender praticamente só
-  da priori. Não usamos mais valores porque cada um exige recalcular as densidades em todos os
-  folds internos.
-\item[(iv)] \textbf{Regressão logística:} multinomial (o que, com duas classes, equivale à
-  logística binária), com regularização L2. O hiper-parâmetro é o inverso da força de
-  regularização, $C\in\{10^{-3},10^{-2},\dots,10^{4}\}$. Sem regularização, os coeficientes
-  explodiriam na V2, em que as classes são quase separáveis. Escolhemos a L2, e não a L1, porque
-  ela não zera coeficientes e se comporta melhor com atributos correlacionados, como
-  \texttt{hp}, \texttt{hpl} e \texttt{labs}. A grade tem um valor por ordem de grandeza, de uma
-  regularização tão forte que deixa os coeficientes perto de zero ($10^{-3}$) até uma que quase
-  não age ($10^{4}$).
-\item[(v)] \textbf{Voto majoritário:} cada um dos classificadores (i)--(iv) vota em uma classe, e
-  vence a mais votada. Com quatro votantes pode dar 2 a 2, e aí desempatamos pela
-  maior posteriori média dos quatro, em vez de sortear.
-\end{enumerate}
+
+No bayesiano gaussiano, $p(x_k\mid\omega_i)$ é uma normal multivariada, com $\hat\mu_i$ e
+$\hat\Sigma_i$ estimados por máxima verossimilhança. Como alguns atributos são quase constantes
+dentro de uma classe, $\hat\Sigma_i$ pode ser singular. Na V2 isso é inevitável: a classe
+minoritária tem cerca de 31 exemplos de treino para 57 atributos, e uma covariância estimada com
+menos exemplos do que atributos nunca tem posto completo. Por isso somamos $10^{-3}I$ à matriz,
+um valor pequeno perto das variâncias (da ordem de 1 nos dados padronizados), mas suficiente para
+invertê-la.
+
+No bayesiano baseado em k-vizinhos, $P(\omega_i\mid x)=k_i/k$, em que $k_i$ é o número de
+vizinhos da classe $\omega_i$ entre os $k$ mais próximos. Os hiper-parâmetros são a distância
+(Euclidiana, City-Block ou Chebyshev) e $k\in\{1,3,\dots,31\}$. Só usamos $k$ ímpar, para não
+haver empate entre as duas classes. Paramos em 31 porque, na V2, a classe minoritária tem cerca
+de 24 exemplos em cada treino da validação interna, e com vizinhanças bem maiores ela
+dificilmente seria maioria.
+
+No bayesiano baseado em janela de Parzen, a densidade de cada classe é estimada com um kernel
+multivariado produto de gaussianas univariadas:
+\[
+p(x\mid\omega_i)=\frac{1}{n_i}\sum_{l\in\omega_i}\prod_{j=1}^{d}\frac{1}{h}\varphi\!\left(\frac{x_j-x_{lj}}{h}\right).
+\]
+O único hiper-parâmetro é a largura $h$, buscada entre 24 valores de 0,1 a 20, espaçados em
+escala logarítmica porque não sabíamos a ordem de grandeza certa. Como os atributos estão
+padronizados, $h=0{,}1$ é uma janela de um décimo de desvio-padrão, quase memorizando o treino,
+enquanto com $h=20$ a densidade fica quase plana e a decisão passa a depender praticamente só da
+priori. Não usamos mais valores porque cada um exige recalcular as densidades em todos os folds
+internos.
+
+A regressão logística é multinomial (o que, com duas classes, equivale à logística binária), com
+regularização L2. O hiper-parâmetro é o inverso da força de regularização,
+$C\in\{10^{-3},10^{-2},\dots,10^{4}\}$. Sem regularização, os coeficientes explodiriam na V2, em
+que as classes são quase separáveis. Escolhemos a L2, e não a L1, porque ela não zera
+coeficientes e se comporta melhor com atributos correlacionados, como \texttt{hp}, \texttt{hpl}
+e \texttt{labs}. A grade tem um valor por ordem de grandeza, de uma regularização tão forte que
+deixa os coeficientes perto de zero ($10^{-3}$) até uma que quase não age ($10^{4}$).
+
+Por fim, no voto majoritário, cada um dos quatro classificadores anteriores vota em uma classe, e
+vence a mais votada. Com quatro votantes pode dar 2 a 2, e aí desempatamos pela maior posteriori
+média dos quatro, em vez de sortear.
 
 \subsubsection*{Organização dos experimentos}
 A comparação foi feita por validação cruzada estratificada $30\times10$-folds. Em cada uma das 30
@@ -487,7 +491,7 @@ Reg. logística & $C=10$ (122); $C=100$ (95) & $C=0{,}1$ (176); $C=1$ (120) \\
 \label{fig:hp}
 \end{figure}
 
-\subsubsection*{(b) Estimativas pontuais e intervalos de confiança}
+\subsubsection*{Estimativas pontuais e intervalos de confiança}
 Para cada classificador e métrica, calculamos a média dos 10 folds de cada repetição, o que dá
 30 valores. A estimativa pontual é a média desses 30 valores, e o intervalo de confiança de 95\%
 é $\bar m \pm t_{0{,}975;29}\, s/\sqrt{30}$. Trabalhamos com as médias por repetição, e não com
@@ -552,7 +556,7 @@ com exceção do gaussiano (4,6\% de erro e F-measure 0,587). No caso dele, o pr
 estimar uma matriz de covariância $57\times57$ com cerca de 31 exemplos de treino da classe
 minoritária, uma estimativa mal condicionada.
 
-\subsubsection*{(c) Teste de Friedman e pós-teste de Nemenyi}
+\subsubsection*{Teste de Friedman e pós-teste de Nemenyi}
 Seguimos a metodologia de \citeonline{demsar2006}. Para cada versão da base e cada métrica, os
 blocos são as 30 repetições e os tratamentos são os 5 classificadores. Em cada repetição, os
 classificadores são ordenados, com posto 1 para o melhor, e o teste compara os postos médios. Por
@@ -618,10 +622,10 @@ significativamente o pior em todas as métricas.
 \label{fig:postos}
 \end{figure}
 
-\subsubsection*{(d) Curvas de aprendizagem}
+\subsubsection*{Curvas de aprendizagem}
 Para cada proporção de treinamento de 5\% a 95\% (com passo de 5\%), a base foi dividida em
 treino e teste por amostragem estratificada. Os hiper-parâmetros ficaram fixos nos valores mais
-escolhidos no item (a), que foram os mais estáveis entre os 300 folds: na V1, City-Block com
+escolhidos na validação interna (Tabela~\ref{tab:hp}), que foram os mais estáveis entre os 300 folds: na V1, City-Block com
 $k=1$, $h=0{,}50$ e $C=10$; na V2, Euclidiana com $k=1$, $h=0{,}10$ e $C=0{,}1$. Assim a curva
 mostra só o efeito do tamanho do treino, e evitamos ajustar hiper-parâmetros com apenas 5\% da
 base. Repetimos cada proporção 5 vezes para não depender de uma única divisão. A Figura~\ref{fig:lc} mostra

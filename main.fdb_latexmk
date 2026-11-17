@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 1794930877.83708 "main.aux" "main.bbl" "main" 1794931233.61742 0
+["bibtex main"] 1794934088.96459 "main.aux" "main.bbl" "main" 1794934415.28061 0
   "./referencias.bib" 1794930500.46814 2187 1de45bc23e9c39627be262342b5d1751 ""
   "/home/rozyelayny/.miktex/texmfs/install/bibtex/bib/abntex2/abntex2-options.bib" 1789755229.43102 5396 4eb260dac60f150ae608d45252853090 ""
   "/home/rozyelayny/.miktex/texmfs/install/bibtex/bst/abntex2/abntex2-alf.bst" 1789755229.43117 60064 0819ac8568f9a482510a46e3a8a6f605 ""
-  "main.aux" 1794931232.70679 9734 73ef9889766b19030fdf50cbf7bf712f "pdflatex"
+  "main.aux" 1794934414.5711 9625 b2571f62369fb2008afce797b85de795 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1794931229.59868 "/home/rozyelayny/Documentos/projetoAM/main.tex" "main.pdf" "main" 1794931233.6179 0
+["pdflatex"] 1794934412.65174 "/home/rozyelayny/Documentos/projetoAM/main.tex" "main.pdf" "main" 1794934415.28078 0
   "/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1794532993.54521 77343 ba1a2c38124606515bc36da6e6040603 ""
   "/home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk" 1794330567.89575 10392 a8a8464b29a503de2eb88b8bcdf36915 ""
   "/home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk" 1794330567.15284 11368 e5b84222de3798768ff4275eb19f5f39 ""
@@ -118,10 +118,10 @@
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/setspace/setspace.sty" 1776977134.23903 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/tools/calc.sty" 1777486879.34727 10374 2ffd4f27c7f90b8a300608069537743c ""
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/url/url.sty" 1777486862.86666 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "/home/rozyelayny/Documentos/projetoAM/main.tex" 1794931229.07599 38277 5ba1531395ef12f1058aaf1cadad6ec0 ""
-  "main.aux" 1794931232.70679 9734 73ef9889766b19030fdf50cbf7bf712f "pdflatex"
-  "main.bbl" 1794930878.03783 1861 5ce06aa7cdbc7dfa72d230fc57da719c "bibtex main"
-  "main.tex" 1794931229.07599 38277 5ba1531395ef12f1058aaf1cadad6ec0 ""
+  "/home/rozyelayny/Documentos/projetoAM/main.tex" 1794934412.30751 38350 3d0a81da701c9542cf806c08ef12ba25 ""
+  "main.aux" 1794934414.5711 9625 b2571f62369fb2008afce797b85de795 "pdflatex"
+  "main.bbl" 1794934089.08463 1861 5ce06aa7cdbc7dfa72d230fc57da719c "bibtex main"
+  "main.tex" 1794934412.30751 38350 3d0a81da701c9542cf806c08ef12ba25 ""
   "resultados_versao_final/q1_matriz_G.png" 1794930500.46893 34727 376ed84b876d8255a66a3f057fdbdaa5 ""
   "resultados_versao_final/q1_matriz_confusao.png" 1794930500.46948 46376 02a23ac9fdef55e12bfda1e4eb791a38 ""
   "resultados_versao_final/q1_objetivo_iteracoes.png" 1794930500.47037 75938 849ceb0889455fb3dac445b273f0df6d ""

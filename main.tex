@@ -83,25 +83,17 @@ resultados.
 
 \section{Algoritmo Double K-Means}
 
-O double k-means \cite{vichi2001} consiste em um método particional exclusivo (\emph{hard}) de
-agrupamento simultâneo de objetos e variáveis.
-
-\subsection{Notação}
-
-Sendo $E=\{e_1,\dots,e_N\}$ o conjunto de $N$ objetos e $Y=\{y_1,\dots,y_P\}$ o conjunto de $P$
+O double k-means consiste em um método particional exclusivo de
+agrupamento simultâneo de objetos e variáveis. A definição formal de \citeonline{vichi2001} segue que sendo $E=\{e_1,\dots,e_N\}$ o conjunto de $N$ objetos e $Y=\{y_1,\dots,y_P\}$ o conjunto de $P$
 variáveis. Cada objeto $e_i$ é descrito pelo vetor $\mathbf{x}_i=(x_{i1},\dots,x_{iP})$, e
 $X=(x_{ij})$ é a matriz de dados $N\times P$. 
 
-O algoritmo procura \textbf{(1)} uma matriz de pertinência dos objetos $U=(u_{ik})_{N\times K}$, com $u_{ik}\in\{0,1\}$ e
+O algoritmo do double k-means procura três coisas: Uma matriz de pertinência dos objetos $U=(u_{ik})_{N\times K}$, com $u_{ik}\in\{0,1\}$ e
   $\sum_{k=1}^{K}u_{ik}=1$, que define a partição $P_k=\{e_i\in E: u_{ik}=1\}$ dos objetos em
-  $K$ grupos;
-\textbf{(2)} uma matriz de pertinência das variáveis $V=(v_{jh})_{P\times H}$, com $v_{jh}\in\{0,1\}$ e
+  $K$ grupos; Uma matriz de pertinência das variáveis $V=(v_{jh})_{P\times H}$, com $v_{jh}\in\{0,1\}$ e
   $\sum_{h=1}^{H}v_{jh}=1$, que define a partição $Q_h=\{y_j\in Y: v_{jh}=1\}$ das variáveis em
-  $H$ grupos;
-\textbf{(3)} uma matriz de protótipos $G=(g_{kh})_{K\times H}$, em que $g_{kh}$ representa o bloco
-  formado pelos objetos de $P_k$ e pelas variáveis de $Q_h$.
-
-Indicam-se por $n_k=|P_k|$ e $n_h=|Q_h|$ os tamanhos dos grupos.
+  $H$ grupos; Uma matriz de protótipos $G=(g_{kh})_{K\times H}$, em que $g_{kh}$ representa o bloco
+  formado pelos objetos de $P_k$ e pelas variáveis de $Q_h$. Indicam-se por $n_k=|P_k|$ e $n_h=|Q_h|$ os tamanhos dos grupos.
 
 \subsection{Função objetivo}
 O double k-means minimiza a heterogeneidade total dos $K\times H$ blocos:
@@ -115,45 +107,45 @@ $UGV^{\top}$, em que cada elemento $x_{ij}$ é substituído pelo protótipo do b
 pertence. Assim, a matriz $G$, de dimensão $K\times H$, resume a estrutura dos dados.
 
 \subsection{Algoritmo}
-A minimização de~\eqref{eq:objetivo} é feita por otimização alternada: a cada passo, uma das
-matrizes é atualizada de forma ótima enquanto as outras ficam fixas.
-\begin{enumerate}
-\item \textbf{Inicialização:} escolhem-se partições aleatórias $U^{(0)}$ e $V^{(0)}$, sem
+A minimização da equação \eqref{eq:objetivo} é feita por otimização alternada, a cada passo uma das
+matrizes é atualizada de forma ótima enquanto as outras ficam fixas. \\
+\textbf{Inicialização:} escolhem-se partições aleatórias $U^{(0)}$ e $V^{(0)}$, sem
   grupos vazios.
-\item \textbf{Passo 1 (protótipos):} com $U$ e $V$ fixos, igualando a zero a derivada de $W$ em
+\textbf{Passo 1 (protótipos):} com $U$ e $V$ fixos, igualando a zero a derivada de $W$ em
   relação a $g_{kh}$ obtém-se a média do bloco:
   \[
   g_{kh}=\frac{1}{n_k\,n_h}\sum_{i\in P_k}\sum_{j\in Q_h}x_{ij}.
   \]
-\item \textbf{Passo 2 (objetos):} com $G$ e $V$ fixos, cada objeto vai para o grupo que
+\textbf{Passo 2 (objetos):} com $G$ e $V$ fixos, cada objeto vai para o grupo que
   minimiza seu erro quadrático:
   \[
   u_{ik}=1 \iff k=\arg\min_{1\le r\le K}\sum_{h=1}^{H}\sum_{j\in Q_h}(x_{ij}-g_{rh})^2 .
   \]
-\item \textbf{Passo 3 (variáveis):} com $G$ e $U$ fixos, cada variável vai para o grupo que
+\textbf{Passo 3 (variáveis):} com $G$ e $U$ fixos, cada variável vai para o grupo que
   minimiza seu erro quadrático:
   \[
   v_{jh}=1 \iff h=\arg\min_{1\le s\le H}\sum_{k=1}^{K}\sum_{i\in P_k}(x_{ij}-g_{ks})^2 .
   \]
-\item \textbf{Parada:} os passos 1 a 3 se repetem enquanto houver transferência de objetos ou
+\textbf{Parada:} os passos 1 a 3 se repetem enquanto houver transferência de objetos ou
   de variáveis entre os grupos.
-\end{enumerate}
+
 
 \subsection{Propriedades}
-Como cada passo minimiza $W$ em relação a uma das matrizes, a função objetivo nunca aumenta de
-uma iteração para a outra. Como o número de partições possíveis é finito, o algoritmo converge
-em um número finito de iterações, mas para um \textbf{mínimo local}, que depende da solução
-inicial. Por isso o algoritmo é executado várias vezes, com inicializações diferentes, e
-escolhe-se a solução de menor $W$.
+Como cada passo minimiza a função objetivo em relação a uma das matrizes, o valor de $W$ nunca
+aumenta de uma iteração para a outra. Além disso, o número de partições possíveis é finito, então
+o algoritmo converge em um número finito de iterações. Essa convergência, porém, é para um mínimo
+local, que depende da solução inicial. Por isso, o algoritmo é executado várias vezes, com
+inicializações diferentes, e escolhe-se a execução que atinge o menor valor da função objetivo
+$W$, equação~\eqref{eq:objetivo}.
 
 Dois casos particulares ajudam a interpretar o método. Com $H=P$, cada variável forma seu
 próprio grupo e o double k-means se reduz ao k-means aplicado aos objetos. Com $H=1$, todas as
 variáveis ficam no mesmo grupo e cada grupo de objetos é representado por um único valor, de
 modo que os objetos são agrupados pela média de suas variáveis.
 
-Entre as vantagens do método estão a simplicidade, o baixo custo computacional (menor do que
-agrupar objetos e variáveis separadamente) e a interpretabilidade da matriz de protótipos.
-Entre as desvantagens: aplica-se apenas a dados numéricos; exige que o usuário escolha $K$ e $H$;
+Entre as vantagens do método estão a simplicidade, o baixo custo computacional que é menor do que
+agrupar objetos e variáveis separadamente, e a interpretabilidade da matriz de protótipos.
+Entre as desvantagens, o algoritmoaplica-se apenas a dados numéricos; exige que o usuário escolha $K$ e $H$;
 depende da solução inicial; é sensível a valores discrepantes e a variáveis irrelevantes;
 encontra apenas grupos compactos e de forma esférica; não considera a correlação entre as
 variáveis; e não distingue os objetos que ficam na fronteira entre grupos.

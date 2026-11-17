@@ -37,18 +37,13 @@ Programa de Pós Graduação em Ciência da Computação}
 \keywords{Agrupamento, Double K-Means, Classificadores Bayesianos, Validação Cruzada, Spambase}
 
 \begin{abstract}
-Este trabalho aplica o double k-means, um método de agrupamento simultâneo de objetos e
-variáveis, à base \emph{Spambase} (4601 e-mails, 57 atributos) e compara cinco classificadores
-nessa base. No agrupamento, com 100 execuções para cada par $(K,H)$, $K\in\{2,3,4\}$, a silhueta
-escolheu $K^*=2$ (0,660), mas a partição isolou apenas 34 e-mails internos da HP Labs e não
-reproduziu a divisão spam $\times$ não-spam (índice de Rand corrigido $\approx 0$). Na
-classificação, os classificadores bayesiano gaussiano, bayesiano k-NN, bayesiano Parzen, regressão
-logística e voto majoritário foram avaliados com a classe original e com a classe dada pelos
-grupos de $K^*$, por validação cruzada estratificada $30\times10$-folds com ajuste interno de
-hiper-parâmetros, intervalos de confiança, testes de Friedman e Nemenyi e curvas de aprendizagem.
-Na base original, o voto majoritário obteve a menor taxa de erro (6,55\%) e a maior F-measure
-(0,917), e o bayesiano gaussiano foi o pior (17,67\% de erro). Os resultados mostram que um
-índice interno de validação alto não garante concordância com as classes conhecidas.
+Este trabalho aplica o double k-means à base \emph{Spambase} e compara cinco classificadores
+nessa base. A silhueta indicou $K^*=2$ grupos (0,660), mas a partição apenas isolou 34 e-mails
+legítimos ligados à HP Labs e não reproduziu a divisão spam $\times$ não-spam (índice de Rand
+corrigido $\approx 0$). Na classificação, avaliada por validação cruzada $30\times10$-folds e
+testes de Friedman e Nemenyi, o voto majoritário foi o melhor (6,55\% de erro) e o bayesiano
+gaussiano o pior (17,67\%). Os resultados mostram que um índice interno alto não garante
+concordância com as classes conhecidas.
 
 \end{abstract}
 

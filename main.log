@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 15:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 15:32
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -329,7 +329,7 @@ File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
 ) (main.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 10.
+(babel)             Reported on input line 11.
 )
 \openout1 = `main.aux'.
 
@@ -438,6 +438,9 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
 [1{/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
@@ -450,7 +453,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
 [3]
-Overfull \hbox (1.5146pt too wide) in paragraph at lines 157--163
+Overfull \hbox (1.5146pt too wide) in paragraph at lines 152--158
 \OT1/cmr/m/n/12 (-20) que ^^Se menor do que agrupar objetos e vari^^Saveis separadamente, e a interpretabilidade
  []
 
@@ -459,7 +462,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 187--189
+Underfull \hbox (badness 10000) in paragraph at lines 182--184
 \OT1/cmr/m/n/10.95 (+20) das sequ^encias cont^^S^^Pnuas de letras
  []
 
@@ -478,7 +481,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q1_silhueta.png, id=37, 578.16pt x 274.626pt>
 File: resultados_versao_final/q1_silhueta.png Graphic file (type png)
 <use resultados_versao_final/q1_silhueta.png>
-Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input line 292.
+Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input line 287.
 (pdftex.def)             Requested size: 352.85939pt x 167.60541pt.
 
 
@@ -490,12 +493,12 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q1_matriz_G.png, id=44, 317.988pt x 187.902pt>
 File: resultados_versao_final/q1_matriz_G.png Graphic file (type png)
 <use resultados_versao_final/q1_matriz_G.png>
-Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input line 324.
+Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input line 319.
 (pdftex.def)             Requested size: 186.8053pt x 110.38527pt.
 <resultados_versao_final/q1_matriz_confusao.png, id=45, 325.215pt x 187.902pt>
 File: resultados_versao_final/q1_matriz_confusao.png Graphic file (type png)
 <use resultados_versao_final/q1_matriz_confusao.png>
-Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used on input line 356.
+Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used on input line 351.
 (pdftex.def)             Requested size: 207.56285pt x 119.92714pt.
 
 
@@ -507,7 +510,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q1_objetivo_iteracoes.png, id=51, 505.89pt x 260.172pt>
 File: resultados_versao_final/q1_objetivo_iteracoes.png Graphic file (type png)
 <use resultados_versao_final/q1_objetivo_iteracoes.png>
-Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  used on input line 368.
+Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  used on input line 363.
 (pdftex.def)             Requested size: 332.10184pt x 170.79698pt.
 
 
@@ -525,7 +528,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q2_ajuste_hiperparametros.png, id=60, 1011.78pt x 520.344pt>
 File: resultados_versao_final/q2_ajuste_hiperparametros.png Graphic file (type png)
 <use resultados_versao_final/q2_ajuste_hiperparametros.png>
-Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png  used on input line 453.
+Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png  used on input line 448.
 (pdftex.def)             Requested size: 415.12572pt x 213.49327pt.
 
 
@@ -537,7 +540,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q2_ic95.png, id=65, 1156.32pt x 491.436pt>
 File: resultados_versao_final/q2_ic95.png Graphic file (type png)
 <use resultados_versao_final/q2_ic95.png>
-Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input line 503.
+Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input line 498.
 (pdftex.def)             Requested size: 415.12572pt x 176.4219pt.
 
 
@@ -549,7 +552,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q2_nemenyi.png, id=70, 1300.86pt x 607.068pt>
 File: resultados_versao_final/q2_nemenyi.png Graphic file (type png)
 <use resultados_versao_final/q2_nemenyi.png>
-Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input line 564.
+Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input line 559.
 (pdftex.def)             Requested size: 415.12572pt x 193.7192pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -564,12 +567,12 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q2_postos_medios.png, id=74, 1300.86pt x 375.804pt>
 File: resultados_versao_final/q2_postos_medios.png Graphic file (type png)
 <use resultados_versao_final/q2_postos_medios.png>
-Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on input line 571.
+Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on input line 566.
 (pdftex.def)             Requested size: 415.12572pt x 119.9214pt.
 <resultados_versao_final/q2_curva_aprendizagem_f1.png, id=75, 1011.78pt x 332.442pt>
 File: resultados_versao_final/q2_curva_aprendizagem_f1.png Graphic file (type png)
 <use resultados_versao_final/q2_curva_aprendizagem_f1.png>
-Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  used on input line 585.
+Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  used on input line 580.
 (pdftex.def)             Requested size: 415.12572pt x 136.39847pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -614,15 +617,15 @@ L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8754 strings out of 469628
- 139849 string characters out of 5466582
+ 8746 strings out of 469628
+ 139793 string characters out of 5466582
  599936 words of memory out of 5000000
  37049 multiletter control sequences out of 15000+600000
- 648016 words of font info for 207 fonts, out of 8000000 for 9000
+ 647812 words of font info for 203 fonts, out of 8000000 for 9000
  162 hyphenation exceptions out of 8191
  71i,13n,79p,1039b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk> </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (17 pages, 1582766 bytes).
+Output written on main.pdf (17 pages, 1582258 bytes).
 PDF statistics:
  181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -245,30 +245,22 @@ Nenhum atributo ou registro foi removido.
 \section{Questões}
 
 
-\subsection{Questão 1}
-
-\subsubsection*{Organização do experimento}
+\subsection{Questão 1}\mbox{}\\
+\textbf{Organização do experimento.}
 Os 57 atributos foram padronizados sobre toda a base, pois têm escalas muito
 diferentes, os atributos \texttt{capital\_run\_length\_*} chegam a milhares, enquanto as
-frequências de palavras ficam entre 0 e 100. De acordo com O double k-means \cite{vichi2001} minimiza
-\[
-W(G,U,V)=\sum_{k=1}^{K}\sum_{h=1}^{H}\sum_{i=1}^{N}\sum_{j=1}^{P}u_{ik}\,v_{jh}\,(x_{ij}-g_{kh})^2
-\]
-alternando três passos: (1) cálculo dos protótipos ótimos
-$g_{kh}=\frac{1}{n_k n_h}\sum_{i\in P_k}\sum_{j\in Q_h}x_{ij}$, com $U$ e $V$ fixos;
-(2) realocação dos objetos, com $G$ e $V$ fixos; e (3) realocação das variáveis, com $G$ e $U$
-fixos. Os passos se repetem enquanto houver transferência de objetos ou de variáveis. Se um grupo
-fica vazio, ele recebe o elemento mais distante do protótipo do próprio grupo.
+frequências de palavras ficam entre 0 e 100. 
 
-Para cada $K\in\{2,3,4\}$ e $H\in\{1,\dots,K\}$ (9 pares), o algoritmo foi executado
-\textbf{100 vezes} a partir de partições iniciais aleatórias, e foi mantida a execução de menor
-$W$. As 100 execuções de cada par rodaram em paralelo em uma GPU NVIDIA A100 (PyTorch), cerca de
-1~s por par. Todas convergiram. Para a melhor solução de cada par calculou-se a silhueta da
-partição dos objetos (distância euclidiana nos dados padronizados).
-
-\subsubsection*{Silhueta e escolha de $K^*$}
+Foram testadas todas as combinações com $K\in\{2,3,4\}$ grupos de objetos e
+$H\in\{1,\dots,K\}$ grupos de variáveis, o que dá 9 pares $(K,H)$. Para cada par, o algoritmo foi executado
+100 vezes a partir de partições iniciais aleatórias, e foi mantida a execução de menor
+$W$. As 100 execuções de cada par rodaram em paralelo em uma GPU NVIDIA A100, com a biblioteca
+PyTorch, em cerca de 1~s por par. Todas convergiram. Para a melhor solução de cada par,
+calculou-se a silhueta da partição dos objetos, usando a distância euclidiana nos dados
+padronizados. \\
+\textbf{Silhueta e escolha de $K^*$.}
 A Tabela~\ref{tab:q1} e a Figura~\ref{fig:q1sil} mostram os resultados. A silhueta é máxima no
-par $(K,H)=(2,2)$, com valor $0{,}660$, bem acima dos demais (todos $\le 0{,}30$). Portanto,
+par $(K,H)=(2,2)$, com valor $0{,}660$, bem acima dos demais. Portanto,
 \[
 K^*=\arg\max_{(K,H)} \mathrm{Sil}(K,H)=2 .
 \]
@@ -302,12 +294,12 @@ $K$ & $H$ & $W$ (melhor) & Iterações & Tamanho dos grupos & Silhueta \\
 \label{fig:q1sil}
 \end{figure}
 
-\subsubsection*{Índice de Rand corrigido}
-Comparando a partição em $K^*=2$ grupos com a classe a priori (spam / não-spam), obtém-se
+\noindent\textbf{Índice de Rand corrigido.}
+Comparando a partição em $K^*=2$ grupos com a classe a priori, spam / não-spam, obtém-se
 \textbf{ARI $=-0{,}0049$}. O valor é praticamente zero, ou seja, a concordância é a esperada ao
 acaso: a partição encontrada não tem relação com a classe spam.
 
-\subsubsection*{(i) Matriz de protótipos dos blocos $G$}
+\subsubsection*{(i) Matriz de protótipos dos blocos}
 A melhor solução com $K^*=2$ ($H=2$) separa as variáveis em dois grupos.
 $Q_2$ tem 11 variáveis: \texttt{hp}, \texttt{hpl}, \texttt{650}, \texttt{lab}, \texttt{labs},
 \texttt{telnet}, \texttt{857}, \texttt{415}, \texttt{85}, \texttt{technology} e \texttt{direct}.
@@ -315,7 +307,7 @@ $Q_1$ reúne as outras 46. A Tabela~\ref{tab:G} e a Figura~\ref{fig:G} mostram o
 
 \begin{table}[H]
 \centering
-\caption{Matriz de protótipos $G$ (dados padronizados), $K^*=2$, $H=2$.}
+\caption{Matriz de protótipo.}
 \label{tab:G}
 \begin{tabular}{lcc}
 \toprule
@@ -336,7 +328,7 @@ $P_2$ ($n=34$)   & $-0{,}1444$ & $\phantom{-}6{,}8612$ \\
 
 O bloco $(P_2,Q_2)$ tem protótipo de $6{,}86$ desvios-padrão, enquanto os outros ficam próximos
 de zero. O grupo $P_2$ é formado por 34 e-mails que usam com frequência muito alta as palavras
-de $Q_2$, típicas de mensagens internas do laboratório (HP Labs) onde a base foi coletada.
+de $Q_2$, típicas de mensagens internas do laboratório HP Labs onde a base foi coletada.
 
 \subsubsection*{(ii) Matriz de confusão}
 

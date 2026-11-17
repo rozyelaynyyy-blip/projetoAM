@@ -1,6 +1,6 @@
 PWD /home/rozyelayny/Documentos/projetoAM
 INPUT /home/rozyelayny/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /home/rozyelayny/Documentos/projetoAM/main.tex
 OUTPUT main.log
 INPUT /home/rozyelayny/.miktex/texmfs/install/tex/latex/amscls/amsart.cls
 INPUT /home/rozyelayny/.miktex/texmfs/install/tex/latex/amscls/amsart.cls

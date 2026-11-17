@@ -1,9 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 13:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 15:03
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
-**./main.tex
-(main.tex
+**/home/rozyelayny/Documentos/projetoAM/main.tex
+(/home/rozyelayny/Documentos/projetoAM/main.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
 (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amscls/amsart.cls
@@ -18,17 +19,14 @@ Package: amsmath 2025/07/09 v2.17z AMS math features
 For additional information on amsmath, use the `?' option.
 (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
 Package: amstext 2024/11/17 v2.01 AMS text
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen152
-))
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+)) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen153
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count275
@@ -79,13 +77,10 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2950.
 LaTeX Info: Redefining \] on input line 2951.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 397
-.
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 397.
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
@@ -118,18 +113,14 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 \dth@everypar=\toks27
 )
 LaTeX Info: Redefining \markboth on input line 2.
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/geometry/geometry.sty
 Package: geometry 2026/03/07 v6.0 Page Geometry
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks28
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
 Package: iftex 2024/12/12 v1.0g TeX engine tests
 ))
 \Gm@cnth=\count295
@@ -144,62 +135,42 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@layouthoffset=\dimen168
 \Gm@layoutvoffset=\dimen169
 \Gm@dimlist=\toks29
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg))
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/dvips/rotate.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/geometry/geometry.cfg)) (/home/rozyelayny/.miktex/texmfs/install/tex/generic/dvips/rotate.sty
 \@rotdimen=\dimen170
 \@rotbox=\box56
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
 Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
 Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics/trig.sty
 Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen171
 \Gin@req@width=\dimen172
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/url/url.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/url/url.sty
 \Urlmuskip=\muskip18
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/babel/babel.sty
-Package: babel 2026/03/24 v26.5 The multilingual framework for LuaLaTeX, pdfLaT
-eX and XeLaTeX
+) (/home/rozyelayny/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2026/03/24 v26.5 The multilingual framework for LuaLaTeX, pdfLaTeX and XeLaTeX
 \babel@savecnt=\count298
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input li
-ne 2078.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input li
-ne 2080.
-LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input lin
-e 2082.
-LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input lin
-e 2083.
-LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) 
-on input line 2084.
-LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) 
-on input line 2086.
-LaTeX Encoding Info:    Redeclaring text command \dj (encoding OT1) on input li
-ne 2104.
-LaTeX Encoding Info:    Redeclaring text command \DJ (encoding OT1) on input li
-ne 2105.
-LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
-on input line 2111.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding OT1) on input line 2078.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding OT1) on input line 2080.
+LaTeX Encoding Info:    Redeclaring text command \ij (encoding T1) on input line 2082.
+LaTeX Encoding Info:    Redeclaring text command \IJ (encoding T1) on input line 2083.
+LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) on input line 2084.
+LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
+LaTeX Encoding Info:    Redeclaring text command \dj (encoding OT1) on input line 2104.
+LaTeX Encoding Info:    Redeclaring text command \DJ (encoding OT1) on input line 2105.
+LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
 \U@D=\dimen173
 \l@unhyphenated=\language1
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+ (/home/rozyelayny/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count299
 Package babel Info: Configuration files are deprecated, as
@@ -210,11 +181,8 @@ Package babel Info: Configuration files are deprecated, as
 * Local config file bblopts.cfg used
 *
 (/home/rozyelayny/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/babel/locale/invalid/babel
--brazil.tex)
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of babel
+) (/home/rozyelayny/.miktex/texmfs/install/tex/generic/babel/locale/invalid/babel-brazil.tex)
 
 Package babel Warning: Name 'brazil' is deprecated.
 (babel)                Use 'brazilian' instead.
@@ -222,9 +190,9 @@ Package babel Warning: Name 'brazil' is deprecated.
 
 Package babel Info: Importing font and identification data for brazil
 (babel)             from babel-pt-BR.ini. Reported on input line 4330.
-
 (/home/rozyelayny/.miktex/texmfs/install/tex/latex/babel-portuges/brazilian.ldf
 Language: portuges 2026/01/24 v1.2u Portuguese support from the babel system
+
 
 Package babel Warning: No hyphenation patterns were preloaded for
 (babel)                the language 'Portuguese' into the format.
@@ -237,14 +205,11 @@ Package babel Info: Making " an active character on input line 132.
 Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks30
 \inpenc@posthook=\toks31
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/abntex2/abntex2cite.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/abntex2/abntex2cite.sty
 Package: abntex2cite 2018/11/24 v-1.9.7 abnTeX2
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/base/ifthen.sty
 Package: ifthen 2024/03/16 v1.1e Standard LaTeX ifthen package (DPC)
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/tools/calc.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/tools/calc.sty
 Package: calc 2025/03/01 v4.3b Infix arithmetic (KKT,FJ)
 \calc@Acount=\count300
 \calc@Bcount=\count301
@@ -256,9 +221,7 @@ LaTeX Info: Redefining \setlength on input line 86.
 LaTeX Info: Redefining \addtolength on input line 87.
 \calc@Ccount=\count302
 \calc@Cskip=\skip61
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/abntex2/abntex2abrev.sty)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/abntex2/abntex2abrev.sty) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
 Package: setspace 2022/12/04 v6.7b set line spacing
 )
 \bibindent=\skip62
@@ -266,14 +229,11 @@ Package: setspace 2022/12/04 v6.7b set line spacing
 \ABCIauxlen=\skip64
 \c@ABCIaux=\count303
 \c@ABCImax=\count304
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/ifpdf.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/ifpdf.sty
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/ifxetex.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/generic/iftex/ifxetex.sty
 Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
 Package: relsize 2013/03/29 ver 4.1
 LaTeX Info: Redefining \larger on input line 150.
 LaTeX Info: Redefining \smaller on input line 151.
@@ -282,19 +242,16 @@ LaTeX Info: Redefining \smaller on input line 151.
 LaTeX Info: Redefining \newblock on input line 591.
 LaTeX Info: Redefining \cite on input line 618.
 \ABCItoken=\toks32
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsaddr/amsaddr.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsaddr/amsaddr.sty
 \c@g@author=\count305
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/float/float.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count306
 \float@exts=\toks33
 \float@box=\box57
 \@float@everytoks=\toks34
 \@floatcapt=\box58
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen176
 \lightrulewidth=\dimen177
@@ -313,18 +270,15 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count309
 \@lastruleclass=\count310
 \@thisrulewidth=\dimen188
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/multirow/multirow.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/multirow/multirow.sty
 Package: multirow 2024/11/12 v2.9 Span multiple rows of a table
 \multirow@colwidth=\skip66
 \multirow@cntb=\count311
 \multirow@dima=\skip67
 \bigstrutjot=\dimen189
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/microtype.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/microtype.sty
 Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count312
 )
@@ -340,11 +294,8 @@ LaTeX Info: Redefining \textls on input line 1449.
 LaTeX Info: Redefining \microtypecontext on input line 2053.
 LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
 \MT@listname@count=\count314
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/microtype-pdftex.d
-ef
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
-
 LaTeX Info: Redefining \lsstyle on input line 944.
 LaTeX Info: Redefining \lslig on input line 944.
 \MT@outer@space=\skip68
@@ -356,10 +307,8 @@ File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 LaTeX Info: Redefining \microtypesetup on input line 3065.
 ) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
 Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
-
 \f@nch@headwidth=\skip69
 \f@nch@offset@elh=\skip70
 \f@nch@offset@erh=\skip71
@@ -375,9 +324,7 @@ Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
 \f@nch@widthC=\skip81
 \f@nch@widthR=\skip82
 \@temptokenb=\toks37
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/l3backend-dev/l3backend-pdft
-ex.def
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/l3backend-dev/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
 ) (main.aux
@@ -401,15 +348,11 @@ LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
-
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
-
-
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
+ (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 *geometry* driver: auto-detecting
@@ -459,12 +402,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \MPnumerator=\count320
 \makeMPintoPDFobject=\count321
 \everyMPtoPDFconversion=\toks39
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.s
-ty
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-85.
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/home/rozyelayny/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
@@ -486,13 +426,10 @@ Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-cmr.cfg
-File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
-(RS)
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-msa.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-(/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-msb.cfg
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 
@@ -514,8 +451,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 
 [3]
 Overfull \hbox (1.5146pt too wide) in paragraph at lines 157--163
-\OT1/cmr/m/n/12 (-20) que ^^Se menor do que agrupar objetos e vari^^Saveis sepa
-radamente, e a interpretabilidade
+\OT1/cmr/m/n/12 (-20) que ^^Se menor do que agrupar objetos e vari^^Saveis separadamente, e a interpretabilidade
  []
 
 Package microtype Info: Loading generic protrusion settings for font family
@@ -539,95 +475,69 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
 [5]
-Overfull \hbox (6.14987pt too wide) in paragraph at lines 256--262
-\OT1/cmr/m/n/12 (-20) alternando tr^es passos: (1) c^^Salculo dos prot^^Sotipos
- ^^Sotimos $\OML/cmm/m/it/12 g[] \OT1/cmr/m/n/12 (-20) = [] [][] [][] \OML/cmm/
-m/it/12 x[]$\OT1/cmr/m/n/12 (-20) ,
- []
-
 <resultados_versao_final/q1_silhueta.png, id=37, 578.16pt x 274.626pt>
 File: resultados_versao_final/q1_silhueta.png Graphic file (type png)
 <use resultados_versao_final/q1_silhueta.png>
-Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input
- line 300.
+Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input line 292.
 (pdftex.def)             Requested size: 352.85939pt x 167.60541pt.
 
-Underfull \vbox (badness 2384) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[6]
-<resultados_versao_final/q1_matriz_G.png, id=43, 317.988pt x 187.902pt>
+[6 <./resultados_versao_final/q1_silhueta.png>]
+<resultados_versao_final/q1_matriz_G.png, id=44, 317.988pt x 187.902pt>
 File: resultados_versao_final/q1_matriz_G.png Graphic file (type png)
 <use resultados_versao_final/q1_matriz_G.png>
-Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input
- line 332.
+Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input line 324.
 (pdftex.def)             Requested size: 186.8053pt x 110.38527pt.
-
-
-Package fancyhdr Warning: \footskip is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.3pt, for example:
-(fancyhdr)                \setlength{\footskip}{13.3pt}.
-
-[7 <./resultados_versao_final/q1_silhueta.png> <./resultados_versao_final/q1_ma
-triz_G.png>]
-<resultados_versao_final/q1_matriz_confusao.png, id=50, 325.215pt x 187.902pt>
+<resultados_versao_final/q1_matriz_confusao.png, id=45, 325.215pt x 187.902pt>
 File: resultados_versao_final/q1_matriz_confusao.png Graphic file (type png)
 <use resultados_versao_final/q1_matriz_confusao.png>
-Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used o
-n input line 364.
+Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used on input line 356.
 (pdftex.def)             Requested size: 207.56285pt x 119.92714pt.
-<resultados_versao_final/q1_objetivo_iteracoes.png, id=51, 505.89pt x 260.172pt
->
-File: resultados_versao_final/q1_objetivo_iteracoes.png Graphic file (type png)
 
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[7 <./resultados_versao_final/q1_matriz_G.png>]
+<resultados_versao_final/q1_objetivo_iteracoes.png, id=51, 505.89pt x 260.172pt>
+File: resultados_versao_final/q1_objetivo_iteracoes.png Graphic file (type png)
 <use resultados_versao_final/q1_objetivo_iteracoes.png>
-Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  use
-d on input line 376.
+Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  used on input line 368.
 (pdftex.def)             Requested size: 332.10184pt x 170.79698pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[8 <./resultados_versao_final/q1_matriz_confusao.png>]
+[8 <./resultados_versao_final/q1_matriz_confusao.png> <./resultados_versao_final/q1_objetivo_iteracoes.png>]
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[9 <./resultados_versao_final/q1_objetivo_iteracoes.png>]
-<resultados_versao_final/q2_ajuste_hiperparametros.png, id=60, 1011.78pt x 520.
-344pt>
-File: resultados_versao_final/q2_ajuste_hiperparametros.png Graphic file (type 
-png)
+[9]
+<resultados_versao_final/q2_ajuste_hiperparametros.png, id=60, 1011.78pt x 520.344pt>
+File: resultados_versao_final/q2_ajuste_hiperparametros.png Graphic file (type png)
 <use resultados_versao_final/q2_ajuste_hiperparametros.png>
-Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png 
- used on input line 461.
+Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png  used on input line 453.
 (pdftex.def)             Requested size: 415.12572pt x 213.49327pt.
 
-Underfull \vbox (badness 1342) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[10]
-<resultados_versao_final/q2_ic95.png, id=64, 1156.32pt x 491.436pt>
+[10 <./resultados_versao_final/q2_ajuste_hiperparametros.png>]
+<resultados_versao_final/q2_ic95.png, id=65, 1156.32pt x 491.436pt>
 File: resultados_versao_final/q2_ic95.png Graphic file (type png)
 <use resultados_versao_final/q2_ic95.png>
-Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input lin
-e 511.
+Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input line 503.
 (pdftex.def)             Requested size: 415.12572pt x 176.4219pt.
 
 
@@ -635,21 +545,11 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[11 <./resultados_versao_final/q2_ajuste_hiperparametros.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-
-Package fancyhdr Warning: \footskip is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.3pt, for example:
-(fancyhdr)                \setlength{\footskip}{13.3pt}.
-
-[12 <./resultados_versao_final/q2_ic95.png>]
-<resultados_versao_final/q2_nemenyi.png, id=73, 1300.86pt x 607.068pt>
+[11 <./resultados_versao_final/q2_ic95.png>]
+<resultados_versao_final/q2_nemenyi.png, id=70, 1300.86pt x 607.068pt>
 File: resultados_versao_final/q2_nemenyi.png Graphic file (type png)
 <use resultados_versao_final/q2_nemenyi.png>
-Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input 
-line 572.
+Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input line 564.
 (pdftex.def)             Requested size: 415.12572pt x 193.7192pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -660,20 +560,16 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[13]
-<resultados_versao_final/q2_postos_medios.png, id=78, 1300.86pt x 375.804pt>
+[12]
+<resultados_versao_final/q2_postos_medios.png, id=74, 1300.86pt x 375.804pt>
 File: resultados_versao_final/q2_postos_medios.png Graphic file (type png)
 <use resultados_versao_final/q2_postos_medios.png>
-Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on 
-input line 579.
+Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on input line 571.
 (pdftex.def)             Requested size: 415.12572pt x 119.9214pt.
-<resultados_versao_final/q2_curva_aprendizagem_f1.png, id=79, 1011.78pt x 332.4
-42pt>
-File: resultados_versao_final/q2_curva_aprendizagem_f1.png Graphic file (type p
-ng)
+<resultados_versao_final/q2_curva_aprendizagem_f1.png, id=75, 1011.78pt x 332.442pt>
+File: resultados_versao_final/q2_curva_aprendizagem_f1.png Graphic file (type png)
 <use resultados_versao_final/q2_curva_aprendizagem_f1.png>
-Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  
-used on input line 593.
+Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  used on input line 585.
 (pdftex.def)             Requested size: 415.12572pt x 136.39847pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -684,8 +580,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[14 <./resultados_versao_final/q2_nemenyi.png> <./resultados_versao_final/q2_po
-stos_medios.png>]
+[13 <./resultados_versao_final/q2_nemenyi.png> <./resultados_versao_final/q2_postos_medios.png>]
 Underfull \vbox (badness 1694) has occurred while \output is active []
 
 
@@ -694,64 +589,42 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[15 <./resultados_versao_final/q2_curva_aprendizagem_f1.png>]
+[14 <./resultados_versao_final/q2_curva_aprendizagem_f1.png>]
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[16]
+[15]
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[17] (main.bbl)
+[16] (main.bbl)
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[18] (main.aux)
+[17] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8754 strings out of 469628
- 139809 string characters out of 5466582
- 598936 words of memory out of 5000000
+ 8756 strings out of 469628
+ 139865 string characters out of 5466582
+ 599936 words of memory out of 5000000
  37049 multiletter control sequences out of 15000+600000
- 648013 words of font info for 207 fonts, out of 8000000 for 9000
+ 648065 words of font info for 208 fonts, out of 8000000 for 9000
  162 hyphenation exceptions out of 8191
- 71i,13n,79p,1003b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
- </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tct
-t1200.pk> </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi
-600/tctt1095.pk></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public
-/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/pu
-blic/amsfonts/cm/cmbxti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/ty
-pe1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fon
-ts/type1/public/amsfonts/cm/cmex10.pfb></home/rozyelayny/.miktex/texmfs/install
-/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/rozyelayny/.miktex/texmfs/ins
-tall/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/rozyelayny/.miktex/texmfs
-/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/rozyelayny/.miktex/tex
-mfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/rozyelayny/.miktex/
-texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.mikt
-ex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.m
-iktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/rozyelayny/
-.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/rozyela
-yny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/rozy
-elayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/r
-ozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></ho
-me/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-</home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.
-pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmt
-t12.pfb>
-Output written on main.pdf (18 pages, 1585487 bytes).
+ 71i,13n,79p,1039b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk> </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (17 pages, 1582859 bytes).
 PDF statistics:
- 184 PDF objects out of 1000 (max. 8388607)
+ 181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43054 words of extra memory for PDF output out of 51595 (max. 10000000)
 

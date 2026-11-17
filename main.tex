@@ -47,16 +47,16 @@ O presente artigo aplica o método de agrupamento Double K-Means na base de dado
 
 O agrupamento é uma tarefa de aprendizagem não supervisionada que busca
 dividir um conjunto de objetos em grupos homogêneos, de modo que objetos de um mesmo grupo sejam semelhantes entre si e relevantemente diferentes dos objetos nos demais grupos. O k-means \cite{macqueen1967} é o
-algoritmo particional mais conhecido, se caracterizando por representar cada grupo por meio um protótipo (o centroide) e
+algoritmo particional mais conhecido, se caracterizando por representar cada grupo por meio um protótipo, o centroide, e
 minimizando a soma das distâncias quadráticas entre os objetos e os protótipos dos seus grupos
-\cite{jain2010}. Os métodos tradicionais, porém, agrupam apenas os objetos (as linhas da matriz
-de dados). Em aplicações como mineração de texto, expressão gênica e sistemas de recomendação, é
+\cite{jain2010}. Os métodos tradicionais, porém, agrupam apenas os objetos, ou seja, as linhas da matriz
+de dados. Em aplicações como mineração de texto, expressão gênica e sistemas de recomendação, é
 útil agrupar ao mesmo tempo objetos e variáveis, buscando blocos da matriz de dados formados por
 objetos e variáveis semelhantes; essa abordagem é chamada de agrupamento simultâneo ou
-\emph{co-clustering} \cite{hartigan1972}. O double k-means \cite{vichi2001} estende o k-means
+\emph{co-clustering} \cite{hartigan1972}. O double k-means estende o k-means
 para esse cenário: ele produz uma partição dos objetos em $K$ grupos, uma partição das variáveis
 em $H$ grupos e uma matriz de protótipos $K\times H$ que resume os dados, minimizando a soma dos
-erros quadráticos dentro dos blocos.
+erros quadráticos dentro dos blocos \cite{vichi2001}.
 
 A base de dados utilizada neste projeto foi a \emph{Spambase} \cite{spambase}, disponível no repositório de
 aprendizagem de máquina da Universidade da Califórnia em Irvine (UCI). Ela foi criada em 1999 por
@@ -66,13 +66,13 @@ de spam, na qual, cada um dos 4601 e-mails é descrito por 57 atributos
 numéricos, que medem a frequência de palavras, caracteres, uso de letras maiúsculas e por
 uma classe que indica se a mensagem é spam. 
 
-Este projeto foi construído em duas partes partes principais. Na \textbf{Questão~1}, o double k-means foi aplicado à spambase
+Este projeto foi construído em duas partes partes principais. Na Questão~1, o double k-means foi aplicado à spambase
 com $K\in\{2,3,4\}$ grupos de objetos e $H\in\{1,\dots,K\}$ grupos de variáveis, com 100
 execuções por par $(K,H)$. O número de grupos $K^*$ foi escolhido pelo índice de silhueta, e a
 partição obtida foi comparada à classe real pelo índice de Rand corrigido, pela matriz de
-protótipos e pela matriz de confusão. Na \textbf{Questão~2}, cinco classificadores
-(bayesiano gaussiano, bayesiano baseado em k-vizinhos, bayesiano baseado em janela de Parzen,
-regressão logística e voto majoritário) foram comparados em duas versões da base: com a classe
+protótipos e pela matriz de confusão. Na Questão~2, os classificadores
+bayesiano gaussiano, bayesiano baseado em k-vizinhos, bayesiano baseado em janela de Parzen,
+regressão logística e voto majoritário foram comparados em duas versões da base: com a classe
 original e com a classe definida pelos grupos de $K^*$. A avaliação usou validação cruzada
 estratificada $30\times10$-folds com ajuste de hiper-parâmetros por validação cruzada interna,
 intervalos de confiança, os testes de Friedman e Nemenyi \cite{demsar2006} e curvas de

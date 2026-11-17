@@ -46,10 +46,9 @@ O presente artigo aplica o método de agrupamento Double K-Means na base de dado
 \section{Introdução}
 
 O agrupamento é uma tarefa de aprendizagem não supervisionada que busca
-dividir um conjunto de objetos em grupos homogêneos, de modo que objetos de um mesmo grupo sejam
-parecidos entre si e diferentes dos objetos dos outros grupos. O k-means \cite{macqueen1967} é o
-algoritmo particional mais conhecido: representa cada grupo por um protótipo (o centroide) e
-minimiza a soma das distâncias quadráticas entre os objetos e os protótipos dos seus grupos
+dividir um conjunto de objetos em grupos homogêneos, de modo que objetos de um mesmo grupo sejam semelhantes entre si e relevantemente diferentes dos objetos nos demais grupos. O k-means \cite{macqueen1967} é o
+algoritmo particional mais conhecido, se caracterizando por representar cada grupo por meio um protótipo (o centroide) e
+minimizando a soma das distâncias quadráticas entre os objetos e os protótipos dos seus grupos
 \cite{jain2010}. Os métodos tradicionais, porém, agrupam apenas os objetos (as linhas da matriz
 de dados). Em aplicações como mineração de texto, expressão gênica e sistemas de recomendação, é
 útil agrupar ao mesmo tempo objetos e variáveis, buscando blocos da matriz de dados formados por
@@ -59,52 +58,49 @@ para esse cenário: ele produz uma partição dos objetos em $K$ grupos, uma par
 em $H$ grupos e uma matriz de protótipos $K\times H$ que resume os dados, minimizando a soma dos
 erros quadráticos dentro dos blocos.
 
-A base de dados utilizada é a \emph{Spambase} \cite{spambase}, disponível no repositório de
+A base de dados utilizada neste projeto foi a \emph{Spambase} \cite{spambase}, disponível no repositório de
 aprendizagem de máquina da Universidade da Califórnia em Irvine (UCI). Ela foi criada em 1999 por
-pesquisadores dos laboratórios da Hewlett-Packard (HP Labs) a partir de e-mails reais: os spams
-vieram de mensagens denunciadas por usuários e os e-mails legítimos vieram de mensagens pessoais e
-de trabalho dos próprios funcionários. Cada um dos 4601 e-mails é descrito por 57 atributos
-numéricos, que medem a frequência de palavras e caracteres e o uso de letras maiúsculas, e por
-uma classe que indica se a mensagem é spam. A base é uma referência clássica para avaliar filtros
-de spam e tem uma particularidade importante: palavras como \texttt{george}, \texttt{hp} e
-\texttt{650} (código de área telefônica do laboratório) refletem o ambiente de onde os e-mails
-legítimos vieram.
+pesquisadores dos laboratórios da Hewlett-Packard (HP Labs) a partir de e-mails reais, onde os spams identificados
+vieram de mensagens denunciadas e os e-mails legítimos vieram de mensagens dos próprios funcionários. A base é uma referência clássica para avaliar filtros
+de spam, na qual, cada um dos 4601 e-mails é descrito por 57 atributos
+numéricos, que medem a frequência de palavras, caracteres, uso de letras maiúsculas e por
+uma classe que indica se a mensagem é spam. 
 
-Este projeto tem duas partes. Na primeira (Questão~1), o double k-means foi aplicado à Spambase
+Este projeto foi construído em duas partes partes principais. Na \textbf{Questão~1}, o double k-means foi aplicado à spambase
 com $K\in\{2,3,4\}$ grupos de objetos e $H\in\{1,\dots,K\}$ grupos de variáveis, com 100
 execuções por par $(K,H)$. O número de grupos $K^*$ foi escolhido pelo índice de silhueta, e a
 partição obtida foi comparada à classe real pelo índice de Rand corrigido, pela matriz de
-protótipos e pela matriz de confusão. Na segunda parte (Questão~2), cinco classificadores
+protótipos e pela matriz de confusão. Na \textbf{Questão~2}, cinco classificadores
 (bayesiano gaussiano, bayesiano baseado em k-vizinhos, bayesiano baseado em janela de Parzen,
 regressão logística e voto majoritário) foram comparados em duas versões da base: com a classe
 original e com a classe definida pelos grupos de $K^*$. A avaliação usou validação cruzada
 estratificada $30\times10$-folds com ajuste de hiper-parâmetros por validação cruzada interna,
 intervalos de confiança, os testes de Friedman e Nemenyi \cite{demsar2006} e curvas de
 aprendizagem. Os experimentos foram implementados em Python, com PyTorch, e executados em GPU no
-cluster do CIn/UFPE. O texto está organizado assim: a Seção~2 descreve o double k-means; a
-Seção~3, a base de dados; a Seção~4 apresenta as respostas às questões; e a Seção~5 discute os
+cluster do CIn/UFPE. O documento está organizado de maneira que a Seção~2 descreve o double k-means, a
+Seção~3, a base de dados, a Seção~4 as respostas às questões e a Seção~5 discute os
 resultados.
 
 \section{Algoritmo Double K-Means}
 
-O double k-means \cite{vichi2001} é um método particional exclusivo (\emph{hard}) de
-agrupamento simultâneo de objetos e variáveis. Esta seção apresenta sua notação, a função
-objetivo, o algoritmo de otimização e suas principais propriedades.
+O double k-means \cite{vichi2001} consiste em um método particional exclusivo (\emph{hard}) de
+agrupamento simultâneo de objetos e variáveis.
 
 \subsection{Notação}
-Sejam $E=\{e_1,\dots,e_N\}$ o conjunto de $N$ objetos e $Y=\{y_1,\dots,y_P\}$ o conjunto de $P$
+
+Sendo $E=\{e_1,\dots,e_N\}$ o conjunto de $N$ objetos e $Y=\{y_1,\dots,y_P\}$ o conjunto de $P$
 variáveis. Cada objeto $e_i$ é descrito pelo vetor $\mathbf{x}_i=(x_{i1},\dots,x_{iP})$, e
-$X=(x_{ij})$ é a matriz de dados $N\times P$. O algoritmo procura:
-\begin{itemize}
-\item uma matriz de pertinência dos objetos $U=(u_{ik})_{N\times K}$, com $u_{ik}\in\{0,1\}$ e
+$X=(x_{ij})$ é a matriz de dados $N\times P$. 
+
+O algoritmo procura \textbf{(1)} uma matriz de pertinência dos objetos $U=(u_{ik})_{N\times K}$, com $u_{ik}\in\{0,1\}$ e
   $\sum_{k=1}^{K}u_{ik}=1$, que define a partição $P_k=\{e_i\in E: u_{ik}=1\}$ dos objetos em
   $K$ grupos;
-\item uma matriz de pertinência das variáveis $V=(v_{jh})_{P\times H}$, com $v_{jh}\in\{0,1\}$ e
+\textbf{(2)} uma matriz de pertinência das variáveis $V=(v_{jh})_{P\times H}$, com $v_{jh}\in\{0,1\}$ e
   $\sum_{h=1}^{H}v_{jh}=1$, que define a partição $Q_h=\{y_j\in Y: v_{jh}=1\}$ das variáveis em
   $H$ grupos;
-\item uma matriz de protótipos $G=(g_{kh})_{K\times H}$, em que $g_{kh}$ representa o bloco
+\textbf{(3)} uma matriz de protótipos $G=(g_{kh})_{K\times H}$, em que $g_{kh}$ representa o bloco
   formado pelos objetos de $P_k$ e pelas variáveis de $Q_h$.
-\end{itemize}
+
 Indicam-se por $n_k=|P_k|$ e $n_h=|Q_h|$ os tamanhos dos grupos.
 
 \subsection{Função objetivo}
@@ -165,10 +161,7 @@ variáveis; e não distingue os objetos que ficam na fronteira entre grupos.
 
 \section{Base de Dados}
 
-A base \emph{Spambase} foi criada em 1999 a partir de e-mails reais. Os spams vieram de denúncias de usuários e os e-mails legítimos vieram de mensagens pessoais
-e de trabalho dos funcionários. Ela tem 4601 e-mails, descritos por
-57 atributos numéricos contínuos e por uma classe binária, \texttt{is\_spam}. Não há
-valores ausentes. \cite{spambase}
+A base \emph{Spambase} foi criada em 1999 a partir de e-mails reais. Os spams vieram de denúncias de usuários e os e-mails legítimos vieram de mensagens pessoais e de trabalho dos funcionários. Ela tem 4601 e-mails, descritos por 57 atributos numéricos contínuos e por uma classe binária, \texttt{is\_spam}. Não há valores ausentes. \cite{spambase}
 
 \subsection{Resumo da Base de Dados \emph{Spambase}}
 

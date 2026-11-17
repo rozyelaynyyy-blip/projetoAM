@@ -405,21 +405,31 @@ $P(\omega_i)=n_i/n$ (máxima verossimilhança).
 \end{enumerate}
 
 \subsubsection*{Organização dos experimentos}
-\begin{itemize}
-\item \textbf{Validação cruzada estratificada $30\times10$-folds:} em cada uma das 30
-  repetições (sementes diferentes), a base é dividida em 10 folds estratificados. Cada fold é
-  usado uma vez como teste, e os outros 9 formam o conjunto de aprendizagem. Isso dá 300
-  avaliações por classificador e por versão. As partições são as mesmas para os 5
-  classificadores, o que torna a comparação pareada.
-\item \textbf{Ajuste de hiper-parâmetros:} dentro dos 9 folds de aprendizagem faz-se uma
-  validação cruzada estratificada 5-folds. Escolhe-se a combinação de maior F-measure média nos
-  5 folds internos, retreina-se o modelo nos 9 folds com esses valores e avalia-se no fold de
-  teste, que nunca participa do ajuste.
-\item \textbf{Padronização:} o \emph{z-score} é estimado só nos dados de treinamento de cada
-  etapa, para que nenhuma informação do teste seja usada.
-\item \textbf{Métricas:} taxa de erro, precisão, cobertura e F-measure. Na V1 a classe positiva
-  é spam; na V2 usa-se a média \emph{macro} entre as classes.
-\end{itemize}
+Para comparar os classificadores, usamos validação cruzada estratificada $30\times10$-folds. Em
+cada uma das 30 repetições, com uma semente diferente, a base foi dividida em 10 folds que
+preservam a proporção das classes. Cada fold serviu uma vez como teste, enquanto os outros 9
+formaram o conjunto de aprendizagem, o que resulta em 300 avaliações de cada classificador em cada
+versão da base. Usamos exatamente as mesmas partições para os cinco classificadores. Dessa forma,
+em cada repetição todos são testados nos mesmos e-mails, condição necessária para os testes de
+Friedman e Nemenyi, que comparam medidas pareadas.
+
+Os hiper-parâmetros do k-NN, da janela de Parzen e da regressão logística foram escolhidos sem
+usar o fold de teste. Dentro dos 9 folds de aprendizagem, rodamos uma validação cruzada
+estratificada 5-folds para cada combinação de valores e ficamos com a de maior F-measure média.
+Em seguida, treinamos o modelo novamente nos 9 folds com os valores escolhidos e só então o
+avaliamos no fold de teste. Adotamos a F-measure como critério de ajuste, em vez da taxa de erro,
+porque as classes são desbalanceadas (39\% de spam na V1 e apenas 34 exemplos na classe
+minoritária da V2), e a taxa de erro tende a favorecer modelos que vão bem apenas na classe
+majoritária.
+
+Com o mesmo cuidado, a padronização \emph{z-score} foi calculada só com os dados de treinamento de
+cada etapa, nos folds internos e nos externos, e depois aplicada ao conjunto de validação ou de
+teste correspondente. Assim, a média e o desvio-padrão do teste nunca entram no modelo.
+
+Avaliamos os classificadores pela taxa de erro, precisão, cobertura e F-measure. Na V1, a classe
+positiva é spam, que é a classe de interesse em um filtro. Na V2 não há uma classe positiva
+natural, então calculamos a média \emph{macro} entre os dois grupos, que dá o mesmo peso a cada
+grupo independentemente do tamanho.
 
 \subsubsection*{Hiper-parâmetros selecionados}
 A Tabela~\ref{tab:hp} mostra os valores mais escolhidos nos 300 folds externos. A

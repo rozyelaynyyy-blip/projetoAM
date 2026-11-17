@@ -38,7 +38,7 @@ Programa de Pós Graduação em Ciência da Computação}
 \keywords{Agrupamento, K-Means, Spambase, Spam, Double K-Means}
 
 \begin{abstract}
-O presente artigo aplica o método de agrupamento Double K-Means na base de dados Spambase, com o objetivo de identificar padrões e características que diferenciam e-mails legítimos de mensagens de spam. 
+O presente artigo aplica o método de agrupamento Double K-Means na base de dados \emph{Spambase}, com o objetivo de identificar padrões e características que diferenciam e-mails legítimos de mensagens de spam. 
 
 \end{abstract}
 
@@ -51,16 +51,14 @@ O presente artigo aplica o método de agrupamento Double K-Means na base de dado
 
 \section{Base de Dados}
 
-A base \emph{Spambase}, do repositório UCI (\url{https://archive.ics.uci.edu/dataset/94/spambase}),
-foi criada em 1999 nos laboratórios da Hewlett-Packard (HP Labs) a partir de e-mails reais.
-Os spams vieram de denúncias de usuários e os e-mails legítimos vieram de mensagens pessoais
-e de trabalho dos funcionários. Ela tem \textbf{4601 e-mails}, cada um descrito por
-\textbf{57 atributos numéricos contínuos} e por uma classe binária, \texttt{is\_spam}. Não há
+A base \emph{Spambase}, foi criada em 1999 a partir de e-mails reais. Os spams vieram de denúncias de usuários e os e-mails legítimos vieram de mensagens pessoais
+e de trabalho dos funcionários. Ela tem 4601 e-mails, descritos por
+57 atributos numéricos contínuos e por uma classe binária, \texttt{is\_spam}. Não há
 valores ausentes.
 
-\subsection*{Atributos}
-Os atributos são frequências calculadas sobre o texto de cada e-mail e formam três grupos
-(Tabela~\ref{tab:atributos}).
+\subsection*{Resumo da Base de Dados \emph{Spambase}}
+Os atributos são baseados nas frequências calculadas sobre o texto de cada e-mail e formam três grupos; 48 atributos de frequência de palavras, 6 de frequência de caracteres e 3 de comprimento de sequências contínuas de letras maiúsculas. A descrição detalhada dos grupos está na
+Tabela~\ref{tab:atributos}.
 
 \begin{table}[H]
 \centering
@@ -71,35 +69,29 @@ Os atributos são frequências calculadas sobre o texto de cada e-mail e formam 
 \toprule
 Grupo & Qtd. & Descrição \\
 \midrule
-\texttt{word\_freq\_}\emph{PALAVRA} & 48 & Percentual (0--100) das palavras do e-mail iguais a
+\texttt{word\_freq\_}\emph{PALAVRA} & 48 & Percentual das palavras do e-mail iguais a
 \emph{PALAVRA} (ex.: \texttt{make}, \texttt{free}, \texttt{money}, \texttt{hp}, \texttt{george}, \texttt{edu}). \\
-\texttt{char\_freq\_}\emph{CARACTERE} & 6 & Percentual (0--100) dos caracteres iguais a
+\texttt{char\_freq\_}\emph{CARACTERE} & 6 & Percentual dos caracteres iguais a
 \texttt{;} \texttt{(} \texttt{[} \texttt{!} \texttt{\$} \texttt{\#}. \\
-\texttt{capital\_run\_length\_*} & 3 & Média (\texttt{average}), maior (\texttt{longest}) e
-soma (\texttt{total}) dos comprimentos das sequências contínuas de letras maiúsculas. \\
+\texttt{capital\_run\_length\_*} & 3 & Média, máximo e
+soma dos comprimentos das sequências contínuas de letras maiúsculas. \\
 \midrule
-\texttt{is\_spam} (classe) & 1 & 1 = spam, 0 = não-spam. \\
+\texttt{is\_spam} & 1 & 1 = spam, 0 = não-spam. \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-\subsection*{Distribuição das classes}
-A base é moderadamente desbalanceada: são \textbf{1813 spams (39,4\%)} e \textbf{2788
-e-mails legítimos (60,6\%)}. Por isso todas as divisões em treino e teste da Questão~2 usam
-amostragem estratificada, que preserva essas proporções.
 
-\subsection*{Características relevantes}
-\begin{itemize}
-\item \textbf{Esparsidade:} 77,4\% dos valores da matriz de dados são zero, já que cada e-mail usa
-  poucas das 48 palavras monitoradas. Das 57 variáveis, 46 têm mais de 70\% de zeros e 19 têm
-  mais de 90\%.
-\item \textbf{Escalas muito diferentes:} as frequências ficam entre 0 e 100 (na maioria das
+Algumas características da base é interessante ressaltar, há um desbalanceamento moderado, são 1813 \emph{spams} (39,4\%) e 2788
+\emph{e-mails} legítimos (60,6\%). Por isso todas as divisões em treino e teste da Questão~2 usam
+amostragem estratificada, que preserva essas proporções. 77,4\% dos valores da matriz de dados são zero, já que cada e-mail usa poucas das 48 palavras monitoradas. Das 57 variáveis, 46 têm mais de 70\% de zeros e 19 têm mais de 90\%.
+As escalas também são muito diferentes, as frequências são percentuais e ficam entre 0 e 100 (na maioria das
   vezes abaixo de 1), enquanto os atributos de maiúsculas chegam a milhares. Por exemplo,
   \texttt{capital\_run\_length\_total} tem mediana 95 e máximo 15\,841.
-\item \textbf{Forte assimetria:} as distribuições têm cauda longa à direita (assimetria mediana
-  de 9,7 entre as variáveis, chegando a 31) e muitos valores discrepantes.
-\item \textbf{Registros repetidos:} há 391 linhas duplicadas, mantidas como na base original.
-\end{itemize}
+Outra característica é a assimetria forte, as distribuições têm cauda longa à direita, assimetria mediana
+  de 9,7 entre as variáveis, chegando a 31, e muitos valores discrepantes.
+Também há registros repetidos, 391 linhas duplicadas, mantidas como na base original.
+
 
 A Tabela~\ref{tab:medias} mostra que alguns atributos separam bem as classes. Palavras e
 símbolos comerciais (\texttt{remove}, \texttt{free}, \texttt{your}, \texttt{!}, \texttt{\$}) e o

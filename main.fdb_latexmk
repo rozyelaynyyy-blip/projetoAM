@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1794331246.95151 "main.tex" "main.pdf" "main" 1794331249.53801 0
-  "/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1794330500.56714 77343 ba1a2c38124606515bc36da6e6040603 ""
+["pdflatex"] 1794872260.3722 "/home/rozyelayny/Documentos/projetoAM/main.tex" "main.pdf" "main" 1794872262.35148 0
+  "/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map" 1794532993.54521 77343 ba1a2c38124606515bc36da6e6040603 ""
   "/home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk" 1794330567.89575 10392 a8a8464b29a503de2eb88b8bcdf36915 ""
   "/home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk" 1794330567.15284 11368 e5b84222de3798768ff4275eb19f5f39 ""
   "/home/rozyelayny/.miktex/texmfs/data/miktex/data/le/pdftex/pdflatex.fmt" 1776974193.23521 10149832 3abc5591ac265481d67ecaa96191dffb ""
@@ -105,8 +105,9 @@
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/setspace/setspace.sty" 1776977134.23903 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/tools/calc.sty" 1777486879.34727 10374 2ffd4f27c7f90b8a300608069537743c ""
   "/home/rozyelayny/.miktex/texmfs/install/tex/latex/url/url.sty" 1777486862.86666 12796 8edb7d69a20b857904dd0ea757c14ec9 ""
-  "main.aux" 1794331249.37685 8183 bc8f0d94063842e75f28d82552396269 "pdflatex"
-  "main.tex" 1794331245.85958 30973 fe63e381d1f3f6f7c7f1f3be253a1ced ""
+  "/home/rozyelayny/Documentos/projetoAM/main.tex" 1794872260.05093 30909 9d28a430f816503d70e11ed96a5b297f ""
+  "main.aux" 1794872262.23529 7968 0ded648817c97e4eceef858333927767 "pdflatex"
+  "main.tex" 1794872260.05093 30909 9d28a430f816503d70e11ed96a5b297f ""
   "resultados_versao_final/q1_matriz_G.png" 1794329627.19567 34727 376ed84b876d8255a66a3f057fdbdaa5 ""
   "resultados_versao_final/q1_matriz_confusao.png" 1794329626.97667 46376 02a23ac9fdef55e12bfda1e4eb791a38 ""
   "resultados_versao_final/q1_objetivo_iteracoes.png" 1794329626.56466 75938 849ceb0889455fb3dac445b273f0df6d ""

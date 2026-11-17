@@ -619,10 +619,11 @@ Os intervalos de confiança são estreitos porque cada um vem da média de 30 re
 novos conjuntos de dados. Na V2, o $h$ de Parzen mais escolhido foi o menor valor da grade
 (0,1). Como o erro já é próximo de zero, isso não deve alterar as conclusões.
 
-\section{Resultados e Discussão}
+\section{Discussão e Considerações Finais}
 
-Esta seção reúne os principais resultados das duas questões, discute como eles se relacionam e
-aponta as limitações do estudo. Os números detalhados estão na Seção~4.
+Esta seção reúne os principais resultados das duas questões, discute como eles se relacionam,
+aponta as limitações do estudo e apresenta as conclusões. Os números detalhados estão na
+Seção~4.
 
 \subsection*{Síntese dos resultados}
 
@@ -664,6 +665,8 @@ Os outros pares $(K,H)$ também tendem a isolar grupos pequenos (de 22 a 34 e-ma
 grupos grandes (Tabela~\ref{tab:q1}). Isso mostra que a estrutura dominante da base, para esse
 algoritmo, não é a divisão spam $\times$ não-spam. O exercício ilustra uma lição importante:
 índices internos de validação não substituem a validação externa quando há classes conhecidas.
+Ainda assim, a matriz de protótipos $G$ se mostrou útil para interpretar o resultado, pois indicou
+de imediato quais variáveis e quais objetos formam o bloco que distingue os grupos.
 
 \subsection*{Desempenho dos classificadores}
 Na base original (V1), a ordem dos classificadores foi a mesma em todas as 30 repetições: voto
@@ -726,38 +729,16 @@ na validação cruzada com ajuste interno da regressão logística, executada em
 Isso tornou viável o protocolo de 600 folds externos (300 por versão da base), cada um com
 validação interna de 5 folds.
 
-\section{Considerações Finais}
-
+\subsection*{Considerações finais}
 Este trabalho aplicou o double k-means à base Spambase e comparou cinco classificadores em duas
-versões da base, seguindo um protocolo experimental planejado para garantir uma avaliação justa.
-As principais conclusões são resumidas a seguir.
-
-\textbf{Agrupamento.} A silhueta indicou $K^*=2$, no par $(K,H)=(2,2)$, mas a partição obtida não
-reproduz a divisão entre spam e e-mails legítimos (ARI $\approx 0$). O algoritmo isolou um grupo
-de apenas 34 e-mails internos da HP Labs, extremo em um conjunto de 11 palavras. Esse resultado
-mostra que a estrutura de grupos mais forte nos dados, do ponto de vista do double k-means, não é
-a que interessa ao problema de classificação. Mostra também que um índice interno alto não basta
-para validar um agrupamento quando há classes conhecidas: é preciso olhar a composição dos grupos
-e usar índices externos, como o ARI. Ainda assim, a matriz de protótipos $G$ se mostrou útil para
-interpretar o resultado, pois indicou de imediato quais variáveis e quais objetos formam o bloco
-que distingue os grupos.
-
-\textbf{Classificação.} Na base original, o voto majoritário foi o melhor classificador (erro de
-6,55\% e F-measure de 0,917), seguido pela regressão logística, que foi o melhor classificador
-isolado e o de maior precisão. Os testes de Friedman e Nemenyi confirmaram diferenças
-significativas entre os classificadores, exceto entre os vizinhos na ordem de desempenho. O
-bayesiano gaussiano teve o pior desempenho, o que evidencia o efeito de uma hipótese de modelo
-inadequada: a normal multivariada não descreve bem atributos esparsos e de cauda longa. As curvas
-de aprendizagem mostraram o compromisso entre viés e variância: k-NN e Parzen melhoram com mais
-dados, enquanto o gaussiano permanece limitado pelo viés. Na versão com as classes vindas do
-agrupamento, quase todos os classificadores ficaram próximos do acerto total, o que confirma que
-a partição da Questão~1 é bem separada no espaço dos atributos, embora não tenha relação com spam.
-
-\textbf{Aspectos metodológicos.} O uso de validação cruzada aninhada, da padronização estimada
-apenas no treino e das mesmas partições para todos os classificadores evitou vazamento de
-informação e permitiu comparações pareadas. A implementação vetorizada em GPU tornou viável
-executar o protocolo completo, com 900 execuções do double k-means e 600 folds externos com ajuste
-interno, em menos de uma hora.
+versões da base, com um protocolo experimental planejado para uma avaliação justa. No
+agrupamento, a silhueta indicou $K^*=2$, mas a partição isolou 34 e-mails internos da HP Labs e
+não reproduziu a divisão spam $\times$ não-spam, o que reforça a necessidade de validação externa.
+Na classificação, o voto majoritário foi o melhor nas duas versões da base e a regressão logística
+foi o melhor classificador isolado, enquanto o bayesiano gaussiano mostrou o custo de uma hipótese
+de modelo inadequada para dados esparsos e de cauda longa. Por fim, a validação cruzada aninhada,
+as partições pareadas e a implementação em GPU permitiram executar o protocolo completo, com 900
+execuções do double k-means e 600 folds externos com ajuste interno, em menos de uma hora.
 
 \bibliography{referencias}
 

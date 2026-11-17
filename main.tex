@@ -632,21 +632,16 @@ Tempo de execução & 42,6 min no total (GPU A100 + 16 CPUs) \\
 
 \subsection*{Agrupamento e classes conhecidas}
 O resultado central da Questão~1 é que a melhor partição segundo a silhueta não tem relação
-com a classe spam/não-spam (ARI $\approx 0$). O double k-means encontrou uma estrutura real: um
+com a classe spam/não-spam, com ARI $\approx 0$. O double k-means encontrou uma estrutura real: um
 grupo de 34 e-mails internos da HP Labs que usam com frequência muito alta um conjunto de 11
-palavras (\texttt{hp}, \texttt{lab}, \texttt{telnet}, \texttt{650}, \dots). Por ser pequeno, extremo
-e bem separado do resto, esse grupo produz uma silhueta alta. Três fatores explicam o resultado:
-\begin{itemize}
-\item \textbf{Sensibilidade a \emph{outliers}:} a função objetivo é uma soma de erros
-  quadráticos, então poucos e-mails com valores muito altos pesam bastante na partição;
-\item \textbf{Esparsidade e assimetria:} com 77\% de zeros e caudas longas, a padronização
-  z-score não deixa as variáveis com distribuições parecidas e amplia os valores extremos;
-\item \textbf{Critério de escolha:} a silhueta mede compacidade e separação, não concordância
+palavras. Por ser pequeno, extremo
+e bem separado do resto, esse grupo produz uma silhueta alta. Três fatores explicam o resultado: \textbf{Sensibilidade a \emph{outliers}}, a função objetivo é uma soma de erros quadráticos, então poucos e-mails com valores muito altos pesam bastante na partição. \textbf{Esparsidade e assimetria:} com 77\% de zeros e caudas longas, a padronização
+  \emph{z-score} não deixa as variáveis com distribuições parecidas e amplia os valores extremos. \textbf{Critério de escolha}, a silhueta mede compacidade e separação, não concordância
   com classes externas. Uma partição com um grupo minúsculo e isolado pode ter silhueta alta.
-\end{itemize}
-Os outros pares $(K,H)$ também tendem a isolar grupos pequenos (de 22 a 34 e-mails) ao lado de
-grupos grandes (Tabela~\ref{tab:q1}). Isso mostra que a estrutura dominante da base, para esse
-algoritmo, não é a divisão spam $\times$ não-spam. O exercício ilustra uma lição importante:
+
+Os outros pares $(K,H)$ também tendem a isolar grupos pequenos, de 22 a 34 e-mails, ao lado de
+grupos grandes, como pode ser visto na Tabela~\ref{tab:q1}. Isso mostra que a estrutura dominante da base, para esse
+algoritmo, não é a divisão spam $\times$ não-spam. O exercício ilustra que
 índices internos de validação não substituem a validação externa quando há classes conhecidas.
 Ainda assim, a matriz de protótipos $G$ se mostrou útil para interpretar o resultado, pois indicou
 de imediato quais variáveis e quais objetos formam o bloco que distingue os grupos.
@@ -680,29 +675,12 @@ gaussiano na V2 vem do desbalanceamento extremo (4567 $\times$ 34): estimar uma 
 $57\times57$ com cerca de 31 exemplos é mal condicionado, mesmo com regularização.
 
 \subsection*{Validade dos experimentos}
-O protocolo foi desenhado para que a avaliação e a comparação sejam justas:
-\begin{itemize}
-\item os hiper-parâmetros foram escolhidos só com os dados de aprendizagem (5-fold interno), e o
-  fold de teste nunca participou do ajuste nem da padronização;
-\item os 5 classificadores usaram exatamente as mesmas partições, o que permite testes
-  pareados (Friedman e Nemenyi);
-\item a amostragem estratificada preservou a proporção das classes em todas as divisões.
-\end{itemize}
+O protocolo foi desenhado para que a avaliação e a comparação sejam justas: Os hiper-parâmetros foram escolhidos só com os dados de aprendizagem, 5-fold interno, e o
+  fold de teste nunca participou do ajuste nem da padronização. Os 5 classificadores usaram exatamente as mesmas partições, o que permite testes
+  pareados de Friedman e Nemenyi. A amostragem estratificada preservou a proporção das classes em todas as divisões.
 
-\subsection*{Limitações}
-\begin{itemize}
-\item \textbf{Independência:} as 30 repetições usam a mesma base, então os intervalos de
-  confiança medem a variabilidade da divisão em folds, não a de novas amostras de e-mails.
-  Por isso são estreitos e devem ser lidos com cautela.
-\item \textbf{Grades de hiper-parâmetros:} na V2, o $h$ de Parzen mais escolhido foi o menor da
-  grade (0,1). Uma grade com valores menores poderia mudar ligeiramente o resultado, embora o erro
-  já esteja próximo de zero.
-\item \textbf{Pré-processamento:} usamos apenas a padronização z-score. Uma transformação como
-  $\log(1+x)$, que reduz a assimetria, poderia beneficiar tanto o double k-means quanto o
-  bayesiano gaussiano.
-\item \textbf{Registros duplicados:} as 391 linhas repetidas foram mantidas; elas podem cair ao
-  mesmo tempo no treino e no teste e favorecer levemente o k-NN com $k=1$.
-\end{itemize}
+
+
 
 \subsection*{Aspectos computacionais}
 O double k-means foi implementado em PyTorch com as 100 inicializações executadas em lote na
@@ -713,15 +691,29 @@ Isso tornou viável o protocolo de 600 folds externos (300 por versão da base),
 validação interna de 5 folds.
 
 \subsection*{Considerações finais}
-Este trabalho aplicou o double k-means à base Spambase e comparou cinco classificadores em duas
-versões da base, com um protocolo experimental planejado para uma avaliação justa. No
-agrupamento, a silhueta indicou $K^*=2$, mas a partição isolou 34 e-mails internos da HP Labs e
-não reproduziu a divisão spam $\times$ não-spam, o que reforça a necessidade de validação externa.
-Na classificação, o voto majoritário foi o melhor nas duas versões da base e a regressão logística
-foi o melhor classificador isolado, enquanto o bayesiano gaussiano mostrou o custo de uma hipótese
-de modelo inadequada para dados esparsos e de cauda longa. Por fim, a validação cruzada aninhada,
-as partições pareadas e a implementação em GPU permitiram executar o protocolo completo, com 900
-execuções do double k-means e 600 folds externos com ajuste interno, em menos de uma hora.
+
+De modo geral, os resultados estão de acordo com o esperado, dadas as particularidades da base, esparsa e muito assimétrica, e do algoritmo, cuja função objetivo é uma soma de erros quadráticos e, portanto, sensível a valores extremos.
+
+No agrupamento, o double k-means não recuperou as classes de interesse, spam e não-spam, mas identificou dois grupos bem separados nos dados: um grupo pequeno de 34 e-mails legítimos com uso muito intenso de termos ligados à HP Labs, provavelmente mensagens internas do laboratório, e o restante da base. A silhueta alta de 0,660 com ARI próximo de zero mostra que um agrupamento bem separado não é, necessariamente, útil para o problema estudado. Por isso, ao aplicar algoritmos de agrupamento, é preciso verificar se as hipóteses do método são adequadas à base de dados e avaliar os grupos obtidos também por validação externa, sempre que houver classes conhecidas.
+
+Na classificação, o voto majoritário foi o melhor nas duas versões da base e a regressão logística foi o melhor classificador isolado, enquanto o bayesiano gaussiano mostrou o custo de uma hipótese de modelo inadequada para dados esparsos e de cauda longa.
+
+O projeto também tem algumas limitações. A primeira é a independência: as 30 repetições usam a
+mesma base, então os intervalos de confiança medem a variabilidade da divisão em folds, e não a
+de novas amostras de e-mails; por isso, são estreitos e devem ser lidos com cautela. A segunda
+é a grade de hiperparâmetros: na V2, o $h$ de Parzen mais escolhido foi o menor valor da grade
+(0,1), e uma grade com valores menores poderia mudar ligeiramente o resultado, embora o erro já
+esteja próximo de zero. A terceira é o pré-processamento: foi usada apenas a padronização
+z-score, e uma transformação como $\log(1+x)$, que reduz a assimetria, poderia beneficiar tanto o
+double k-means quanto o bayesiano gaussiano. Por fim, as 391 linhas duplicadas foram mantidas e
+podem cair ao mesmo tempo no treino e no teste, o que favorece levemente o k-NN com $k=1$.
+
+Por fim, os objetivos do projeto foram alcançados, o double k-means foi aplicado à Spambase e
+sua partição foi analisada e comparada com as classes conhecidas, e os cinco classificadores
+foram avaliados e comparados nas duas versões da base com um protocolo experimental rigoroso.
+Além dos resultados numéricos, o trabalho evidenciou a importância de avaliar os métodos à luz
+das características dos dados e do objetivo da análise.
+
 
 \bibliography{referencias}
 

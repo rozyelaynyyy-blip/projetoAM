@@ -1,0 +1,601 @@
+base,rep,fold,metrica,k,h,C
+V1 original,0,0,city-block,1,0.5015,10000.0
+V1 original,0,1,city-block,1,0.5015,100.0
+V1 original,0,2,city-block,5,0.3984,10.0
+V1 original,0,3,city-block,1,0.5015,1000.0
+V1 original,0,4,city-block,7,0.5015,1000.0
+V1 original,0,5,euclidiana,1,0.5015,10.0
+V1 original,0,6,city-block,7,0.6315,100.0
+V1 original,0,7,city-block,1,0.5015,10.0
+V1 original,0,8,city-block,1,0.5015,10.0
+V1 original,0,9,city-block,5,0.3984,100.0
+V1 original,1,0,city-block,5,0.5015,10.0
+V1 original,1,1,city-block,1,0.5015,10000.0
+V1 original,1,2,city-block,1,0.5015,10.0
+V1 original,1,3,city-block,7,0.5015,10.0
+V1 original,1,4,euclidiana,1,0.5015,100.0
+V1 original,1,5,city-block,1,0.5015,1.0
+V1 original,1,6,city-block,7,0.5015,1000.0
+V1 original,1,7,city-block,1,0.6315,100.0
+V1 original,1,8,city-block,1,0.5015,10000.0
+V1 original,1,9,city-block,5,0.5015,10.0
+V1 original,2,0,city-block,1,0.5015,1000.0
+V1 original,2,1,city-block,1,0.5015,10000.0
+V1 original,2,2,city-block,5,0.5015,10000.0
+V1 original,2,3,city-block,1,0.5015,1000.0
+V1 original,2,4,city-block,1,0.5015,100.0
+V1 original,2,5,city-block,5,0.5015,1000.0
+V1 original,2,6,city-block,1,0.5015,1000.0
+V1 original,2,7,city-block,7,0.5015,1000.0
+V1 original,2,8,city-block,5,0.5015,100.0
+V1 original,2,9,city-block,5,0.5015,10.0
+V1 original,3,0,city-block,5,0.5015,100.0
+V1 original,3,1,city-block,1,0.5015,1000.0
+V1 original,3,2,city-block,1,0.5015,10.0
+V1 original,3,3,city-block,5,0.6315,10.0
+V1 original,3,4,city-block,1,0.5015,10000.0
+V1 original,3,5,city-block,1,0.5015,10.0
+V1 original,3,6,city-block,3,0.5015,1000.0
+V1 original,3,7,euclidiana,1,0.5015,1000.0
+V1 original,3,8,city-block,5,0.5015,100.0
+V1 original,3,9,euclidiana,1,0.5015,10000.0
+V1 original,4,0,city-block,3,0.5015,1000.0
+V1 original,4,1,city-block,5,0.5015,10.0
+V1 original,4,2,euclidiana,1,0.5015,10.0
+V1 original,4,3,euclidiana,1,0.5015,100.0
+V1 original,4,4,city-block,7,0.6315,10.0
+V1 original,4,5,euclidiana,1,0.5015,10.0
+V1 original,4,6,city-block,5,0.6315,10.0
+V1 original,4,7,city-block,1,0.5015,10.0
+V1 original,4,8,city-block,5,0.5015,1000.0
+V1 original,4,9,city-block,1,0.5015,10.0
+V1 original,5,0,city-block,1,0.5015,100.0
+V1 original,5,1,city-block,1,0.5015,1.0
+V1 original,5,2,city-block,5,0.6315,100.0
+V1 original,5,3,city-block,7,0.5015,1.0
+V1 original,5,4,euclidiana,1,0.5015,10000.0
+V1 original,5,5,city-block,3,0.5015,10.0
+V1 original,5,6,city-block,5,0.5015,1000.0
+V1 original,5,7,city-block,1,0.6315,100.0
+V1 original,5,8,euclidiana,1,0.5015,10000.0
+V1 original,5,9,euclidiana,3,0.5015,10.0
+V1 original,6,0,city-block,7,0.6315,10.0
+V1 original,6,1,city-block,5,0.5015,1000.0
+V1 original,6,2,city-block,7,0.5015,10.0
+V1 original,6,3,city-block,5,0.5015,100.0
+V1 original,6,4,city-block,5,0.5015,10.0
+V1 original,6,5,city-block,3,0.6315,10.0
+V1 original,6,6,city-block,1,0.5015,10.0
+V1 original,6,7,euclidiana,1,0.5015,1000.0
+V1 original,6,8,city-block,7,0.6315,1000.0
+V1 original,6,9,city-block,3,0.5015,10.0
+V1 original,7,0,city-block,5,0.5015,100.0
+V1 original,7,1,city-block,7,0.5015,100.0
+V1 original,7,2,city-block,1,0.5015,10.0
+V1 original,7,3,euclidiana,1,0.5015,10.0
+V1 original,7,4,city-block,5,0.5015,100.0
+V1 original,7,5,euclidiana,3,0.5015,10000.0
+V1 original,7,6,city-block,1,0.5015,100.0
+V1 original,7,7,city-block,5,0.5015,100.0
+V1 original,7,8,city-block,1,0.5015,100.0
+V1 original,7,9,city-block,5,0.5015,10.0
+V1 original,8,0,city-block,5,0.5015,100.0
+V1 original,8,1,euclidiana,1,0.6315,10.0
+V1 original,8,2,city-block,1,0.5015,10.0
+V1 original,8,3,euclidiana,1,0.5015,10000.0
+V1 original,8,4,city-block,1,0.6315,100.0
+V1 original,8,5,city-block,5,0.5015,1000.0
+V1 original,8,6,euclidiana,1,0.6315,100.0
+V1 original,8,7,city-block,1,0.5015,10.0
+V1 original,8,8,city-block,5,0.5015,10.0
+V1 original,8,9,euclidiana,1,0.5015,100.0
+V1 original,9,0,euclidiana,1,0.5015,1000.0
+V1 original,9,1,city-block,7,0.6315,10.0
+V1 original,9,2,euclidiana,5,0.6315,100.0
+V1 original,9,3,city-block,7,0.5015,1000.0
+V1 original,9,4,euclidiana,1,0.5015,10.0
+V1 original,9,5,city-block,1,0.5015,1000.0
+V1 original,9,6,city-block,1,0.6315,10.0
+V1 original,9,7,city-block,7,0.5015,10.0
+V1 original,9,8,city-block,5,0.6315,100.0
+V1 original,9,9,city-block,5,0.5015,10000.0
+V1 original,10,0,euclidiana,1,0.5015,10.0
+V1 original,10,1,city-block,3,0.5015,10.0
+V1 original,10,2,city-block,7,0.5015,10.0
+V1 original,10,3,city-block,1,0.5015,10.0
+V1 original,10,4,city-block,5,0.5015,100.0
+V1 original,10,5,city-block,5,0.5015,100.0
+V1 original,10,6,city-block,7,0.6315,10.0
+V1 original,10,7,euclidiana,1,0.5015,10000.0
+V1 original,10,8,city-block,5,0.5015,100.0
+V1 original,10,9,euclidiana,1,0.5015,10.0
+V1 original,11,0,euclidiana,1,0.5015,10.0
+V1 original,11,1,euclidiana,1,0.5015,10.0
+V1 original,11,2,city-block,5,0.6315,100.0
+V1 original,11,3,city-block,1,0.5015,100.0
+V1 original,11,4,euclidiana,1,0.5015,100.0
+V1 original,11,5,city-block,1,0.6315,100.0
+V1 original,11,6,city-block,1,0.5015,1000.0
+V1 original,11,7,city-block,1,0.5015,10.0
+V1 original,11,8,city-block,5,0.5015,100.0
+V1 original,11,9,city-block,1,0.5015,10000.0
+V1 original,12,0,city-block,3,0.5015,10.0
+V1 original,12,1,city-block,5,0.5015,1000.0
+V1 original,12,2,city-block,5,0.5015,100.0
+V1 original,12,3,euclidiana,1,0.6315,10.0
+V1 original,12,4,city-block,7,0.5015,10000.0
+V1 original,12,5,city-block,5,0.5015,10000.0
+V1 original,12,6,city-block,5,0.6315,100.0
+V1 original,12,7,euclidiana,1,0.5015,10.0
+V1 original,12,8,city-block,7,0.5015,10.0
+V1 original,12,9,city-block,1,0.5015,100.0
+V1 original,13,0,city-block,1,0.5015,100.0
+V1 original,13,1,city-block,7,0.5015,10.0
+V1 original,13,2,city-block,1,0.5015,100.0
+V1 original,13,3,city-block,5,0.5015,100.0
+V1 original,13,4,city-block,1,0.5015,100.0
+V1 original,13,5,city-block,5,0.5015,1000.0
+V1 original,13,6,city-block,3,0.6315,100.0
+V1 original,13,7,city-block,1,0.6315,100.0
+V1 original,13,8,euclidiana,1,0.5015,10.0
+V1 original,13,9,city-block,5,0.5015,10.0
+V1 original,14,0,city-block,7,0.6315,10000.0
+V1 original,14,1,euclidiana,1,0.5015,100.0
+V1 original,14,2,city-block,1,0.5015,10000.0
+V1 original,14,3,city-block,5,0.5015,10000.0
+V1 original,14,4,city-block,1,0.5015,100.0
+V1 original,14,5,euclidiana,1,0.5015,1000.0
+V1 original,14,6,city-block,5,0.5015,100.0
+V1 original,14,7,city-block,1,0.6315,10.0
+V1 original,14,8,city-block,5,0.6315,100.0
+V1 original,14,9,city-block,1,0.5015,100.0
+V1 original,15,0,city-block,3,0.5015,10.0
+V1 original,15,1,euclidiana,1,0.6315,10.0
+V1 original,15,2,city-block,5,0.5015,10.0
+V1 original,15,3,euclidiana,1,0.5015,10.0
+V1 original,15,4,city-block,5,0.5015,100.0
+V1 original,15,5,city-block,5,0.5015,100.0
+V1 original,15,6,city-block,5,0.5015,100.0
+V1 original,15,7,city-block,5,0.5015,100.0
+V1 original,15,8,city-block,1,0.5015,10.0
+V1 original,15,9,city-block,1,0.5015,100.0
+V1 original,16,0,city-block,5,0.5015,100.0
+V1 original,16,1,euclidiana,1,0.5015,10.0
+V1 original,16,2,city-block,1,0.5015,100.0
+V1 original,16,3,euclidiana,1,0.5015,10.0
+V1 original,16,4,city-block,1,0.5015,10.0
+V1 original,16,5,city-block,1,0.5015,100.0
+V1 original,16,6,city-block,5,0.5015,100.0
+V1 original,16,7,city-block,5,0.5015,10000.0
+V1 original,16,8,city-block,7,0.5015,100.0
+V1 original,16,9,city-block,1,0.5015,1000.0
+V1 original,17,0,city-block,1,0.5015,10000.0
+V1 original,17,1,euclidiana,1,0.5015,1000.0
+V1 original,17,2,euclidiana,1,0.5015,10.0
+V1 original,17,3,city-block,5,0.5015,1000.0
+V1 original,17,4,city-block,1,0.5015,10.0
+V1 original,17,5,city-block,3,0.5015,10.0
+V1 original,17,6,city-block,5,0.5015,100.0
+V1 original,17,7,city-block,1,0.5015,10.0
+V1 original,17,8,city-block,1,0.5015,100.0
+V1 original,17,9,city-block,5,0.6315,10.0
+V1 original,18,0,city-block,5,0.6315,10.0
+V1 original,18,1,euclidiana,1,0.5015,10.0
+V1 original,18,2,euclidiana,1,0.5015,1000.0
+V1 original,18,3,city-block,5,0.5015,100.0
+V1 original,18,4,city-block,5,0.5015,100.0
+V1 original,18,5,city-block,1,0.5015,10.0
+V1 original,18,6,city-block,3,0.6315,10.0
+V1 original,18,7,city-block,7,0.3984,10.0
+V1 original,18,8,city-block,5,0.5015,10000.0
+V1 original,18,9,city-block,5,0.6315,10.0
+V1 original,19,0,city-block,5,0.5015,100.0
+V1 original,19,1,euclidiana,1,0.5015,10.0
+V1 original,19,2,city-block,7,0.5015,10.0
+V1 original,19,3,city-block,7,0.5015,100.0
+V1 original,19,4,city-block,5,0.6315,10.0
+V1 original,19,5,city-block,5,0.5015,100.0
+V1 original,19,6,city-block,5,0.6315,100.0
+V1 original,19,7,city-block,5,0.5015,1000.0
+V1 original,19,8,city-block,5,0.5015,100.0
+V1 original,19,9,city-block,1,0.6315,100.0
+V1 original,20,0,city-block,1,0.5015,10.0
+V1 original,20,1,city-block,5,0.6315,10.0
+V1 original,20,2,city-block,7,0.6315,1000.0
+V1 original,20,3,city-block,1,0.5015,100.0
+V1 original,20,4,city-block,3,0.5015,1000.0
+V1 original,20,5,city-block,5,0.5015,10000.0
+V1 original,20,6,city-block,5,0.5015,100.0
+V1 original,20,7,city-block,5,0.5015,100.0
+V1 original,20,8,euclidiana,1,0.5015,10.0
+V1 original,20,9,city-block,1,0.5015,10000.0
+V1 original,21,0,city-block,5,0.5015,1000.0
+V1 original,21,1,euclidiana,1,0.5015,100.0
+V1 original,21,2,city-block,5,0.5015,100.0
+V1 original,21,3,city-block,3,0.5015,100.0
+V1 original,21,4,city-block,5,0.5015,10.0
+V1 original,21,5,city-block,1,0.5015,10.0
+V1 original,21,6,city-block,1,0.5015,10.0
+V1 original,21,7,city-block,1,0.6315,10.0
+V1 original,21,8,city-block,1,0.6315,10.0
+V1 original,21,9,euclidiana,1,0.3984,10000.0
+V1 original,22,0,city-block,5,0.5015,10.0
+V1 original,22,1,city-block,1,0.5015,1000.0
+V1 original,22,2,city-block,1,0.5015,10.0
+V1 original,22,3,city-block,1,0.5015,100.0
+V1 original,22,4,city-block,3,0.5015,1000.0
+V1 original,22,5,city-block,5,0.5015,10.0
+V1 original,22,6,city-block,7,0.5015,1000.0
+V1 original,22,7,city-block,1,0.5015,1000.0
+V1 original,22,8,city-block,1,0.5015,100.0
+V1 original,22,9,euclidiana,1,0.5015,10.0
+V1 original,23,0,city-block,1,0.5015,10000.0
+V1 original,23,1,city-block,5,0.5015,1000.0
+V1 original,23,2,city-block,5,0.5015,10.0
+V1 original,23,3,city-block,1,0.5015,1.0
+V1 original,23,4,city-block,5,0.5015,10.0
+V1 original,23,5,euclidiana,1,0.5015,10000.0
+V1 original,23,6,city-block,1,0.6315,1000.0
+V1 original,23,7,city-block,1,0.5015,100.0
+V1 original,23,8,euclidiana,1,0.5015,100.0
+V1 original,23,9,city-block,1,0.5015,10000.0
+V1 original,24,0,city-block,1,0.5015,10.0
+V1 original,24,1,city-block,1,0.5015,10000.0
+V1 original,24,2,city-block,5,0.5015,10.0
+V1 original,24,3,euclidiana,1,0.6315,10.0
+V1 original,24,4,city-block,5,0.5015,100.0
+V1 original,24,5,city-block,7,0.6315,100.0
+V1 original,24,6,euclidiana,1,0.5015,10.0
+V1 original,24,7,city-block,5,0.6315,10.0
+V1 original,24,8,city-block,5,0.5015,10.0
+V1 original,24,9,city-block,7,0.5015,10.0
+V1 original,25,0,city-block,5,0.3984,10.0
+V1 original,25,1,euclidiana,1,0.5015,100.0
+V1 original,25,2,city-block,1,0.5015,10.0
+V1 original,25,3,euclidiana,1,0.5015,10.0
+V1 original,25,4,city-block,1,0.5015,100.0
+V1 original,25,5,city-block,1,0.5015,10000.0
+V1 original,25,6,city-block,1,0.5015,10.0
+V1 original,25,7,city-block,7,0.5015,1000.0
+V1 original,25,8,euclidiana,1,0.5015,10.0
+V1 original,25,9,city-block,1,0.5015,10.0
+V1 original,26,0,city-block,1,0.5015,10000.0
+V1 original,26,1,city-block,1,0.6315,10.0
+V1 original,26,2,city-block,1,0.6315,10.0
+V1 original,26,3,city-block,1,0.5015,10.0
+V1 original,26,4,city-block,5,0.5015,10.0
+V1 original,26,5,city-block,1,0.5015,1000.0
+V1 original,26,6,city-block,1,0.5015,100.0
+V1 original,26,7,city-block,1,0.5015,10000.0
+V1 original,26,8,city-block,3,0.5015,100.0
+V1 original,26,9,euclidiana,1,0.5015,100.0
+V1 original,27,0,euclidiana,1,0.5015,10.0
+V1 original,27,1,euclidiana,1,0.5015,100.0
+V1 original,27,2,city-block,7,0.5015,10000.0
+V1 original,27,3,city-block,5,0.6315,100.0
+V1 original,27,4,city-block,1,0.5015,100.0
+V1 original,27,5,city-block,1,0.5015,100.0
+V1 original,27,6,city-block,1,0.5015,10.0
+V1 original,27,7,city-block,5,0.5015,10.0
+V1 original,27,8,city-block,3,0.5015,1000.0
+V1 original,27,9,city-block,5,0.5015,1000.0
+V1 original,28,0,euclidiana,1,0.6315,100.0
+V1 original,28,1,euclidiana,1,0.5015,100.0
+V1 original,28,2,euclidiana,1,0.5015,10.0
+V1 original,28,3,city-block,5,0.6315,10.0
+V1 original,28,4,city-block,5,0.5015,10.0
+V1 original,28,5,city-block,1,0.5015,100.0
+V1 original,28,6,city-block,1,0.5015,100.0
+V1 original,28,7,city-block,5,0.5015,10.0
+V1 original,28,8,city-block,5,0.5015,10000.0
+V1 original,28,9,city-block,5,0.3984,10.0
+V1 original,29,0,city-block,3,0.5015,10.0
+V1 original,29,1,city-block,5,0.5015,100.0
+V1 original,29,2,city-block,1,0.5015,10.0
+V1 original,29,3,city-block,1,0.5015,100.0
+V1 original,29,4,euclidiana,3,0.5015,10.0
+V1 original,29,5,city-block,1,0.5015,10000.0
+V1 original,29,6,city-block,5,0.5015,1.0
+V1 original,29,7,city-block,5,0.5015,10.0
+V1 original,29,8,city-block,3,0.6315,10.0
+V1 original,29,9,city-block,7,0.5015,10.0
+V2 clusters (K*=2),0,0,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),0,1,city-block,1,0.7951,0.1
+V2 clusters (K*=2),0,2,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),0,3,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),0,4,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),0,5,euclidiana,1,3.1672,0.1
+V2 clusters (K*=2),0,6,city-block,9,1.2604,1.0
+V2 clusters (K*=2),0,7,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),0,8,city-block,11,3.1672,0.1
+V2 clusters (K*=2),0,9,city-block,1,0.1,1.0
+V2 clusters (K*=2),1,0,euclidiana,5,1.001,0.1
+V2 clusters (K*=2),1,1,euclidiana,13,0.7951,1.0
+V2 clusters (K*=2),1,2,euclidiana,3,0.1,0.1
+V2 clusters (K*=2),1,3,euclidiana,3,0.5015,1.0
+V2 clusters (K*=2),1,4,city-block,1,1.2604,0.1
+V2 clusters (K*=2),1,5,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),1,6,euclidiana,1,1.9979,0.1
+V2 clusters (K*=2),1,7,euclidiana,1,2.5155,1.0
+V2 clusters (K*=2),1,8,city-block,1,2.5155,0.1
+V2 clusters (K*=2),1,9,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),2,0,euclidiana,9,0.7951,1.0
+V2 clusters (K*=2),2,1,city-block,1,3.1672,0.1
+V2 clusters (K*=2),2,2,euclidiana,9,1.2604,0.1
+V2 clusters (K*=2),2,3,city-block,11,2.5155,0.1
+V2 clusters (K*=2),2,4,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),2,5,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),2,6,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),2,7,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),2,8,euclidiana,3,0.1,0.1
+V2 clusters (K*=2),2,9,euclidiana,13,0.6315,0.1
+V2 clusters (K*=2),3,0,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),3,1,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),3,2,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),3,3,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),3,4,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),3,5,euclidiana,1,3.1672,0.1
+V2 clusters (K*=2),3,6,euclidiana,7,0.1,0.1
+V2 clusters (K*=2),3,7,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),3,8,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),3,9,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),4,0,euclidiana,1,3.1672,0.1
+V2 clusters (K*=2),4,1,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),4,2,euclidiana,13,1.9979,1.0
+V2 clusters (K*=2),4,3,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),4,4,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),4,5,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),4,6,euclidiana,3,0.1,1.0
+V2 clusters (K*=2),4,7,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),4,8,euclidiana,1,1.2604,1.0
+V2 clusters (K*=2),4,9,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),5,0,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),5,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),5,2,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),5,3,city-block,9,1.5869,1.0
+V2 clusters (K*=2),5,4,city-block,1,1.9979,1.0
+V2 clusters (K*=2),5,5,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),5,6,euclidiana,3,0.7951,0.1
+V2 clusters (K*=2),5,7,city-block,1,1.9979,0.1
+V2 clusters (K*=2),5,8,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),5,9,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),6,0,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),6,1,city-block,1,3.1672,1.0
+V2 clusters (K*=2),6,2,city-block,1,0.1,0.1
+V2 clusters (K*=2),6,3,euclidiana,3,0.1,1.0
+V2 clusters (K*=2),6,4,euclidiana,1,1.9979,0.1
+V2 clusters (K*=2),6,5,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),6,6,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),6,7,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),6,8,city-block,1,2.5155,0.1
+V2 clusters (K*=2),6,9,euclidiana,9,1.9979,1.0
+V2 clusters (K*=2),7,0,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),7,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),7,2,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),7,3,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),7,4,euclidiana,3,2.5155,0.1
+V2 clusters (K*=2),7,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),7,6,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),7,7,euclidiana,3,1.001,100.0
+V2 clusters (K*=2),7,8,euclidiana,15,0.1,1.0
+V2 clusters (K*=2),7,9,euclidiana,1,0.7951,1.0
+V2 clusters (K*=2),8,0,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),8,1,euclidiana,3,0.1,1.0
+V2 clusters (K*=2),8,2,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),8,3,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),8,4,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),8,5,euclidiana,11,3.1672,0.1
+V2 clusters (K*=2),8,6,euclidiana,1,1.2604,1.0
+V2 clusters (K*=2),8,7,euclidiana,1,0.7951,1.0
+V2 clusters (K*=2),8,8,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),8,9,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),9,0,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),9,1,euclidiana,13,0.1,0.1
+V2 clusters (K*=2),9,2,city-block,1,0.7951,1.0
+V2 clusters (K*=2),9,3,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),9,4,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),9,5,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),9,6,euclidiana,1,1.9979,1.0
+V2 clusters (K*=2),9,7,city-block,1,0.7951,0.1
+V2 clusters (K*=2),9,8,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),9,9,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),10,0,city-block,1,1.2604,0.1
+V2 clusters (K*=2),10,1,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),10,2,euclidiana,1,3.1672,0.1
+V2 clusters (K*=2),10,3,euclidiana,5,0.1,0.1
+V2 clusters (K*=2),10,4,euclidiana,1,0.1,10.0
+V2 clusters (K*=2),10,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),10,6,city-block,11,0.1,0.1
+V2 clusters (K*=2),10,7,euclidiana,11,2.5155,1.0
+V2 clusters (K*=2),10,8,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),10,9,euclidiana,1,1.5869,1.0
+V2 clusters (K*=2),11,0,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),11,1,city-block,5,0.1,0.1
+V2 clusters (K*=2),11,2,euclidiana,1,0.5015,1.0
+V2 clusters (K*=2),11,3,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),11,4,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),11,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),11,6,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),11,7,euclidiana,3,3.1672,0.1
+V2 clusters (K*=2),11,8,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),11,9,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),12,0,euclidiana,3,0.7951,0.1
+V2 clusters (K*=2),12,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),12,2,city-block,1,2.5155,1.0
+V2 clusters (K*=2),12,3,euclidiana,11,2.5155,0.1
+V2 clusters (K*=2),12,4,city-block,1,0.1,1.0
+V2 clusters (K*=2),12,5,city-block,13,0.1,1000.0
+V2 clusters (K*=2),12,6,euclidiana,1,1.9979,1.0
+V2 clusters (K*=2),12,7,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),12,8,city-block,1,1.001,0.1
+V2 clusters (K*=2),12,9,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),13,0,euclidiana,1,1.2604,1.0
+V2 clusters (K*=2),13,1,euclidiana,1,0.7951,1.0
+V2 clusters (K*=2),13,2,city-block,1,1.5869,1.0
+V2 clusters (K*=2),13,3,city-block,1,0.7951,0.1
+V2 clusters (K*=2),13,4,city-block,1,1.001,1.0
+V2 clusters (K*=2),13,5,euclidiana,1,1.5869,0.1
+V2 clusters (K*=2),13,6,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),13,7,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),13,8,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),13,9,euclidiana,9,1.9979,1.0
+V2 clusters (K*=2),14,0,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),14,1,euclidiana,1,1.2604,1.0
+V2 clusters (K*=2),14,2,euclidiana,3,0.7951,0.1
+V2 clusters (K*=2),14,3,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),14,4,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),14,5,euclidiana,1,3.1672,1.0
+V2 clusters (K*=2),14,6,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),14,7,euclidiana,7,1.9979,1.0
+V2 clusters (K*=2),14,8,city-block,11,0.1,0.1
+V2 clusters (K*=2),14,9,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),15,0,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),15,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),15,2,city-block,11,1.5869,1.0
+V2 clusters (K*=2),15,3,euclidiana,1,1.9979,1.0
+V2 clusters (K*=2),15,4,euclidiana,7,3.1672,0.1
+V2 clusters (K*=2),15,5,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),15,6,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),15,7,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),15,8,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),15,9,city-block,1,0.1,0.1
+V2 clusters (K*=2),16,0,euclidiana,3,0.1,0.1
+V2 clusters (K*=2),16,1,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),16,2,euclidiana,5,0.1,1.0
+V2 clusters (K*=2),16,3,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),16,4,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),16,5,euclidiana,1,1.9979,1.0
+V2 clusters (K*=2),16,6,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),16,7,city-block,1,1.5869,1.0
+V2 clusters (K*=2),16,8,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),16,9,city-block,1,2.5155,1.0
+V2 clusters (K*=2),17,0,city-block,1,0.1,0.1
+V2 clusters (K*=2),17,1,euclidiana,5,0.1,0.1
+V2 clusters (K*=2),17,2,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),17,3,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),17,4,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),17,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),17,6,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),17,7,euclidiana,1,3.1672,1.0
+V2 clusters (K*=2),17,8,euclidiana,3,0.7951,1.0
+V2 clusters (K*=2),17,9,euclidiana,1,3.1672,0.1
+V2 clusters (K*=2),18,0,euclidiana,11,1.9979,1.0
+V2 clusters (K*=2),18,1,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),18,2,city-block,1,1.001,0.1
+V2 clusters (K*=2),18,3,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),18,4,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),18,5,euclidiana,9,0.1,0.1
+V2 clusters (K*=2),18,6,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),18,7,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),18,8,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),18,9,euclidiana,11,0.7951,1.0
+V2 clusters (K*=2),19,0,euclidiana,7,2.5155,0.1
+V2 clusters (K*=2),19,1,city-block,1,3.1672,0.1
+V2 clusters (K*=2),19,2,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),19,3,euclidiana,1,1.9979,0.1
+V2 clusters (K*=2),19,4,euclidiana,1,3.1672,1.0
+V2 clusters (K*=2),19,5,city-block,1,2.5155,0.1
+V2 clusters (K*=2),19,6,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),19,7,city-block,5,0.1,0.1
+V2 clusters (K*=2),19,8,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),19,9,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),20,0,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),20,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),20,2,city-block,1,2.5155,0.1
+V2 clusters (K*=2),20,3,euclidiana,1,0.7951,1.0
+V2 clusters (K*=2),20,4,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),20,5,euclidiana,13,0.1,0.1
+V2 clusters (K*=2),20,6,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),20,7,city-block,13,1.001,0.1
+V2 clusters (K*=2),20,8,euclidiana,1,1.9979,0.1
+V2 clusters (K*=2),20,9,euclidiana,3,0.7951,1.0
+V2 clusters (K*=2),21,0,euclidiana,7,0.1,0.1
+V2 clusters (K*=2),21,1,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),21,2,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),21,3,city-block,1,1.001,0.1
+V2 clusters (K*=2),21,4,city-block,1,0.7951,1.0
+V2 clusters (K*=2),21,5,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),21,6,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),21,7,euclidiana,11,2.5155,1.0
+V2 clusters (K*=2),21,8,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),21,9,city-block,1,1.2604,1.0
+V2 clusters (K*=2),22,0,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),22,1,euclidiana,7,1.2604,0.1
+V2 clusters (K*=2),22,2,euclidiana,1,0.5015,0.1
+V2 clusters (K*=2),22,3,euclidiana,7,1.9979,0.1
+V2 clusters (K*=2),22,4,euclidiana,5,0.1,0.1
+V2 clusters (K*=2),22,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),22,6,euclidiana,9,1.9979,1.0
+V2 clusters (K*=2),22,7,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),22,8,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),22,9,city-block,1,1.2604,1.0
+V2 clusters (K*=2),23,0,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),23,1,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),23,2,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),23,3,euclidiana,1,3.1672,0.1
+V2 clusters (K*=2),23,4,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),23,5,euclidiana,5,0.7951,0.1
+V2 clusters (K*=2),23,6,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),23,7,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),23,8,euclidiana,3,0.1,1.0
+V2 clusters (K*=2),23,9,euclidiana,1,0.7951,1.0
+V2 clusters (K*=2),24,0,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),24,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),24,2,euclidiana,1,1.5869,0.1
+V2 clusters (K*=2),24,3,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),24,4,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),24,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),24,6,euclidiana,1,1.9979,0.1
+V2 clusters (K*=2),24,7,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),24,8,city-block,1,2.5155,1.0
+V2 clusters (K*=2),24,9,euclidiana,3,0.7951,1.0
+V2 clusters (K*=2),25,0,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),25,1,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),25,2,euclidiana,1,1.5869,1.0
+V2 clusters (K*=2),25,3,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),25,4,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),25,5,euclidiana,3,1.2604,1.0
+V2 clusters (K*=2),25,6,euclidiana,5,0.1,0.1
+V2 clusters (K*=2),25,7,city-block,1,0.6315,0.1
+V2 clusters (K*=2),25,8,euclidiana,3,0.7951,0.1
+V2 clusters (K*=2),25,9,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),26,0,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),26,1,city-block,11,1.001,1.0
+V2 clusters (K*=2),26,2,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),26,3,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),26,4,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),26,5,euclidiana,3,0.1,1.0
+V2 clusters (K*=2),26,6,city-block,11,0.1,1.0
+V2 clusters (K*=2),26,7,city-block,13,1.001,1.0
+V2 clusters (K*=2),26,8,euclidiana,1,0.7951,0.1
+V2 clusters (K*=2),26,9,city-block,11,0.7951,1.0
+V2 clusters (K*=2),27,0,euclidiana,3,1.001,0.1
+V2 clusters (K*=2),27,1,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),27,2,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),27,3,city-block,1,0.1,0.1
+V2 clusters (K*=2),27,4,city-block,13,0.1,1.0
+V2 clusters (K*=2),27,5,euclidiana,1,2.5155,1.0
+V2 clusters (K*=2),27,6,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),27,7,euclidiana,1,0.7951,1.0
+V2 clusters (K*=2),27,8,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),27,9,euclidiana,1,1.001,1.0
+V2 clusters (K*=2),28,0,euclidiana,5,0.1,1.0
+V2 clusters (K*=2),28,1,city-block,1,2.5155,1.0
+V2 clusters (K*=2),28,2,euclidiana,1,1.001,0.1
+V2 clusters (K*=2),28,3,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),28,4,euclidiana,1,1.2604,1.0
+V2 clusters (K*=2),28,5,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),28,6,euclidiana,11,2.5155,0.1
+V2 clusters (K*=2),28,7,city-block,9,0.1,0.1
+V2 clusters (K*=2),28,8,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),28,9,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),29,0,city-block,1,2.5155,1.0
+V2 clusters (K*=2),29,1,euclidiana,1,0.1,0.1
+V2 clusters (K*=2),29,2,euclidiana,1,0.1,1.0
+V2 clusters (K*=2),29,3,euclidiana,1,1.5869,1.0
+V2 clusters (K*=2),29,4,euclidiana,5,1.001,1.0
+V2 clusters (K*=2),29,5,euclidiana,1,2.5155,0.1
+V2 clusters (K*=2),29,6,euclidiana,1,1.9979,1.0
+V2 clusters (K*=2),29,7,city-block,9,0.1,10.0
+V2 clusters (K*=2),29,8,euclidiana,1,1.2604,0.1
+V2 clusters (K*=2),29,9,euclidiana,1,1.001,0.1

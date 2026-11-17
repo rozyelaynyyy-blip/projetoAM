@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  5 NOV 2026 02:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 01:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -305,34 +305,53 @@ Package microtype Info: Loading configuration file microtype.cfg.
 File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
 )
 LaTeX Info: Redefining \microtypesetup on input line 3065.
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/fancyhdr/fancyhdr.sty
+Package: fancyhdr 2025/02/07 v5.2 Extensive control of page headers and footers
+\f@nch@headwidth=\skip69
+\f@nch@offset@elh=\skip70
+\f@nch@offset@erh=\skip71
+\f@nch@offset@olh=\skip72
+\f@nch@offset@orh=\skip73
+\f@nch@offset@elf=\skip74
+\f@nch@offset@erf=\skip75
+\f@nch@offset@olf=\skip76
+\f@nch@offset@orf=\skip77
+\f@nch@height=\skip78
+\f@nch@footalignment=\skip79
+\f@nch@widthL=\skip80
+\f@nch@widthC=\skip81
+\f@nch@widthR=\skip82
+\@temptokenb=\toks37
 ) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/l3backend-dev/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count315
 ) (main.aux
 Package babel Info: 'brazil' activates 'portuges' shorthands.
-(babel)             Reported on input line 12.
+(babel)             Reported on input line 11.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 14.
-LaTeX Font Info:    ... okay on input line 14.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 14.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 26.
  (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 14.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 26.
  (/home/rozyelayny/.miktex/texmfs/install/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -353,7 +372,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 * \oddsidemargin=27.31465pt
 * \evensidemargin=27.31465pt
 * \topmargin=5.31465pt
-* \headheight=8.0pt
+* \headheight=15.0pt
 * \headsep=14.0pt
 * \topskip=10.0pt
 * \footskip=12.0pt
@@ -377,25 +396,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \scratchbox=\box60
 \nofMPsegments=\count317
 \nofMParguments=\count318
-\everyMPshowfont=\toks37
+\everyMPshowfont=\toks38
 \MPscratchCnt=\count319
 \MPscratchDim=\dimen192
 \MPnumerator=\count320
 \makeMPintoPDFobject=\count321
-\everyMPtoPDFconversion=\toks38
+\everyMPtoPDFconversion=\toks39
 ) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (/home/rozyelayny/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Info: Redefining \microtypecontext on input line 14.
-Package microtype Info: Applying patch `item' on input line 14.
-Package microtype Info: Applying patch `toc' on input line 14.
-Package microtype Info: Applying patch `eqnum' on input line 14.
-Package microtype Info: Applying patch `footnote' on input line 14.
-Package microtype Info: Applying patch `verbatim' on input line 14.
-LaTeX Info: Redefining \microtypesetup on input line 14.
+LaTeX Info: Redefining \microtypecontext on input line 26.
+Package microtype Info: Applying patch `item' on input line 26.
+Package microtype Info: Applying patch `toc' on input line 26.
+Package microtype Info: Applying patch `eqnum' on input line 26.
+Package microtype Info: Applying patch `footnote' on input line 26.
+Package microtype Info: Applying patch `verbatim' on input line 26.
+LaTeX Info: Redefining \microtypesetup on input line 26.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
@@ -408,24 +427,225 @@ Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
-) [1{/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}] (main.aux)
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+) (/home/rozyelayny/.miktex/texmfs/install/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[1{/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
+Underfull \vbox (badness 1112) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[2]
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[3]
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `cmtt' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Underfull \hbox (badness 10000) in paragraph at lines 191--193
+\OT1/cmr/m/n/10.95 (+20) das sequ^encias cont^^S^^Pnuas de letras
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[4]
+Overfull \hbox (6.14987pt too wide) in paragraph at lines 260--266
+\OT1/cmr/m/n/12 (-20) alternando tr^es passos: (1) c^^Salculo dos prot^^Sotipos ^^Sotimos $\OML/cmm/m/it/12 g[] \OT1/cmr/m/n/12 (-20) = [] [][] [][] \OML/cmm/m/it/12 x[]$\OT1/cmr/m/n/12 (-20) ,
+ []
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[5]
+<resultados_versao_final/q1_silhueta.png, id=35, 578.16pt x 274.626pt>
+File: resultados_versao_final/q1_silhueta.png Graphic file (type png)
+<use resultados_versao_final/q1_silhueta.png>
+Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input line 304.
+(pdftex.def)             Requested size: 352.85939pt x 167.60541pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[6]
+<resultados_versao_final/q1_matriz_G.png, id=42, 317.988pt x 187.902pt>
+File: resultados_versao_final/q1_matriz_G.png Graphic file (type png)
+<use resultados_versao_final/q1_matriz_G.png>
+Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input line 336.
+(pdftex.def)             Requested size: 186.8053pt x 110.38527pt.
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[7 <./resultados_versao_final/q1_silhueta.png> <./resultados_versao_final/q1_matriz_G.png>]
+<resultados_versao_final/q1_matriz_confusao.png, id=49, 325.215pt x 187.902pt>
+File: resultados_versao_final/q1_matriz_confusao.png Graphic file (type png)
+<use resultados_versao_final/q1_matriz_confusao.png>
+Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used on input line 368.
+(pdftex.def)             Requested size: 207.56285pt x 119.92714pt.
+<resultados_versao_final/q1_objetivo_iteracoes.png, id=50, 505.89pt x 260.172pt>
+File: resultados_versao_final/q1_objetivo_iteracoes.png Graphic file (type png)
+<use resultados_versao_final/q1_objetivo_iteracoes.png>
+Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  used on input line 380.
+(pdftex.def)             Requested size: 332.10184pt x 170.79698pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[8 <./resultados_versao_final/q1_matriz_confusao.png>]
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[9 <./resultados_versao_final/q1_objetivo_iteracoes.png>]
+<resultados_versao_final/q2_ajuste_hiperparametros.png, id=59, 1011.78pt x 520.344pt>
+File: resultados_versao_final/q2_ajuste_hiperparametros.png Graphic file (type png)
+<use resultados_versao_final/q2_ajuste_hiperparametros.png>
+Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png  used on input line 465.
+(pdftex.def)             Requested size: 415.12572pt x 213.49327pt.
+
+Underfull \vbox (badness 1342) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[10]
+<resultados_versao_final/q2_ic95.png, id=63, 1156.32pt x 491.436pt>
+File: resultados_versao_final/q2_ic95.png Graphic file (type png)
+<use resultados_versao_final/q2_ic95.png>
+Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input line 515.
+(pdftex.def)             Requested size: 415.12572pt x 176.4219pt.
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[11 <./resultados_versao_final/q2_ajuste_hiperparametros.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[12 <./resultados_versao_final/q2_ic95.png>]
+<resultados_versao_final/q2_nemenyi.png, id=72, 1300.86pt x 607.068pt>
+File: resultados_versao_final/q2_nemenyi.png Graphic file (type png)
+<use resultados_versao_final/q2_nemenyi.png>
+Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input line 576.
+(pdftex.def)             Requested size: 415.12572pt x 193.7192pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[13]
+<resultados_versao_final/q2_postos_medios.png, id=77, 1300.86pt x 375.804pt>
+File: resultados_versao_final/q2_postos_medios.png Graphic file (type png)
+<use resultados_versao_final/q2_postos_medios.png>
+Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on input line 583.
+(pdftex.def)             Requested size: 415.12572pt x 119.9214pt.
+<resultados_versao_final/q2_curva_aprendizagem_f1.png, id=78, 1011.78pt x 332.442pt>
+File: resultados_versao_final/q2_curva_aprendizagem_f1.png Graphic file (type png)
+<use resultados_versao_final/q2_curva_aprendizagem_f1.png>
+Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  used on input line 597.
+(pdftex.def)             Requested size: 415.12572pt x 136.39847pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[14 <./resultados_versao_final/q2_nemenyi.png> <./resultados_versao_final/q2_postos_medios.png>]
+Underfull \vbox (badness 1694) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[15 <./resultados_versao_final/q2_curva_aprendizagem_f1.png>]
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[16]
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[17] (main.bbl)
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[18] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 7502 strings out of 469628
- 120250 string characters out of 5466582
- 581649 words of memory out of 5000000
- 36032 multiletter control sequences out of 15000+600000
- 632788 words of font info for 72 fonts, out of 8000000 for 9000
+ 8744 strings out of 469628
+ 139777 string characters out of 5466582
+ 598936 words of memory out of 5000000
+ 37051 multiletter control sequences out of 15000+600000
+ 647721 words of font info for 201 fonts, out of 8000000 for 9000
  162 hyphenation exceptions out of 8191
- 71i,5n,79p,1039b,253s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr9.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on main.pdf (1 page, 95921 bytes).
+ 71i,13n,79p,1039b,490s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk> </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on main.pdf (18 pages, 1574626 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 179 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 16385 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 43054 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -1,0 +1,45 @@
+\providecommand{\abntreprintinfo}[1]{%
+ \citeonline{#1}}
+\setlength{\labelsep}{0pt}\begin{thebibliography}{}
+\providecommand{\abntrefinfo}[3]{}
+\providecommand{\abntbstabout}[1]{}
+\abntbstabout{v-1.9.7 }
+
+\bibitem[Dem{\v{s}}ar 2006]{demsar2006}
+\abntrefinfo{Dem{\v{s}}ar}{DEM{\v{S}}AR}{2006}
+{DEM{\v{S}}AR, J. Statistical comparisons of classifiers over multiple data
+  sets.
+\emph{Journal of Machine Learning Research}, v.~7, p. 1--30, 2006.}
+
+\bibitem[Hartigan 1972]{hartigan1972}
+\abntrefinfo{Hartigan}{HARTIGAN}{1972}
+{HARTIGAN, J.~A. Direct clustering of a data matrix.
+\emph{Journal of the American Statistical Association}, v.~67, n.~337, p.
+  123--129, 1972.}
+
+\bibitem[Hopkins et al. 1999]{spambase}
+\abntrefinfo{Hopkins et al.}{HOPKINS et al.}{1999}
+{HOPKINS, M. et al. \emph{Spambase}. 1999. UCI Machine Learning Repository.
+Dispon{\'\i}vel em: \url{https://archive.ics.uci.edu/dataset/94/spambase}.
+  Acesso em: 17 nov. 2026.}
+
+\bibitem[Jain 2010]{jain2010}
+\abntrefinfo{Jain}{JAIN}{2010}
+{JAIN, A.~K. Data clustering: 50 years beyond {K}-means.
+\emph{Pattern Recognition Letters}, v.~31, n.~8, p. 651--666, 2010.}
+
+\bibitem[MacQueen 1967]{macqueen1967}
+\abntrefinfo{MacQueen}{MACQUEEN}{1967}
+{MACQUEEN, J. Some methods for classification and analysis of multivariate
+  observations. In:  \emph{Proceedings of the Fifth Berkeley Symposium on
+  Mathematical Statistics and Probability}. Berkeley: University of California
+  Press, 1967. v.~1, p. 281--297.}
+
+\bibitem[Vichi 2001]{vichi2001}
+\abntrefinfo{Vichi}{VICHI}{2001}
+{VICHI, M. Double k-means clustering for simultaneous classification of objects
+  and variables. In:  BORRA, S. et al. (Ed.). \emph{Advances in Classification
+  and Data Analysis}. Berlin, Heidelberg: Springer, 2001,  (Studies in
+  Classification, Data Analysis, and Knowledge Organization). p. 43--52.}
+
+\end{thebibliography}

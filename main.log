@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 16:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (MiKTeX 26.5) (preloaded format=pdflatex 2026.4.23)  17 NOV 2026 21:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -438,7 +438,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
 [1{/home/rozyelayny/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 4291) has occurred while \output is active []
 
 
 
@@ -481,7 +481,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q1_silhueta.png, id=37, 578.16pt x 274.626pt>
 File: resultados_versao_final/q1_silhueta.png Graphic file (type png)
 <use resultados_versao_final/q1_silhueta.png>
-Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input line 287.
+Package pdftex.def Info: resultados_versao_final/q1_silhueta.png  used on input line 288.
 (pdftex.def)             Requested size: 352.85939pt x 167.60541pt.
 
 
@@ -493,12 +493,12 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q1_matriz_G.png, id=44, 317.988pt x 187.902pt>
 File: resultados_versao_final/q1_matriz_G.png Graphic file (type png)
 <use resultados_versao_final/q1_matriz_G.png>
-Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input line 319.
+Package pdftex.def Info: resultados_versao_final/q1_matriz_G.png  used on input line 320.
 (pdftex.def)             Requested size: 186.8053pt x 110.38527pt.
 <resultados_versao_final/q1_matriz_confusao.png, id=45, 325.215pt x 187.902pt>
 File: resultados_versao_final/q1_matriz_confusao.png Graphic file (type png)
 <use resultados_versao_final/q1_matriz_confusao.png>
-Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used on input line 351.
+Package pdftex.def Info: resultados_versao_final/q1_matriz_confusao.png  used on input line 352.
 (pdftex.def)             Requested size: 207.56285pt x 119.92714pt.
 
 
@@ -510,7 +510,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 <resultados_versao_final/q1_objetivo_iteracoes.png, id=51, 505.89pt x 260.172pt>
 File: resultados_versao_final/q1_objetivo_iteracoes.png Graphic file (type png)
 <use resultados_versao_final/q1_objetivo_iteracoes.png>
-Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  used on input line 363.
+Package pdftex.def Info: resultados_versao_final/q1_objetivo_iteracoes.png  used on input line 364.
 (pdftex.def)             Requested size: 332.10184pt x 170.79698pt.
 
 
@@ -519,28 +519,44 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
 [8 <./resultados_versao_final/q1_matriz_confusao.png> <./resultados_versao_final/q1_objetivo_iteracoes.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 384--386
+
+ []
+
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
 [9]
-<resultados_versao_final/q2_ajuste_hiperparametros.png, id=60, 1011.78pt x 520.344pt>
-File: resultados_versao_final/q2_ajuste_hiperparametros.png Graphic file (type png)
-<use resultados_versao_final/q2_ajuste_hiperparametros.png>
-Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png  used on input line 448.
-(pdftex.def)             Requested size: 415.12572pt x 213.49327pt.
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[10 <./resultados_versao_final/q2_ajuste_hiperparametros.png>]
-<resultados_versao_final/q2_ic95.png, id=65, 1156.32pt x 491.436pt>
+[10]
+<resultados_versao_final/q2_ajuste_hiperparametros.png, id=63, 1011.78pt x 520.344pt>
+File: resultados_versao_final/q2_ajuste_hiperparametros.png Graphic file (type png)
+<use resultados_versao_final/q2_ajuste_hiperparametros.png>
+Package pdftex.def Info: resultados_versao_final/q2_ajuste_hiperparametros.png  used on input line 491.
+(pdftex.def)             Requested size: 415.12572pt x 213.49327pt.
+
+Underfull \vbox (badness 2197) has occurred while \output is active []
+
+
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[11 <./resultados_versao_final/q2_ajuste_hiperparametros.png>]
+<resultados_versao_final/q2_ic95.png, id=68, 1156.32pt x 491.436pt>
 File: resultados_versao_final/q2_ic95.png Graphic file (type png)
 <use resultados_versao_final/q2_ic95.png>
-Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input line 498.
+Package pdftex.def Info: resultados_versao_final/q2_ic95.png  used on input line 544.
 (pdftex.def)             Requested size: 415.12572pt x 176.4219pt.
 
 
@@ -548,34 +564,31 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[11 <./resultados_versao_final/q2_ic95.png>]
-<resultados_versao_final/q2_nemenyi.png, id=70, 1300.86pt x 607.068pt>
+[12 <./resultados_versao_final/q2_ic95.png>]
+<resultados_versao_final/q2_nemenyi.png, id=73, 1300.86pt x 607.068pt>
 File: resultados_versao_final/q2_nemenyi.png Graphic file (type png)
 <use resultados_versao_final/q2_nemenyi.png>
-Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input line 559.
+Package pdftex.def Info: resultados_versao_final/q2_nemenyi.png  used on input line 615.
 (pdftex.def)             Requested size: 415.12572pt x 193.7192pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[12]
-<resultados_versao_final/q2_postos_medios.png, id=74, 1300.86pt x 375.804pt>
+[13]
+<resultados_versao_final/q2_postos_medios.png, id=78, 1300.86pt x 375.804pt>
 File: resultados_versao_final/q2_postos_medios.png Graphic file (type png)
 <use resultados_versao_final/q2_postos_medios.png>
-Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on input line 566.
+Package pdftex.def Info: resultados_versao_final/q2_postos_medios.png  used on input line 622.
 (pdftex.def)             Requested size: 415.12572pt x 119.9214pt.
-<resultados_versao_final/q2_curva_aprendizagem_f1.png, id=75, 1011.78pt x 332.442pt>
+<resultados_versao_final/q2_curva_aprendizagem_f1.png, id=79, 1011.78pt x 332.442pt>
 File: resultados_versao_final/q2_curva_aprendizagem_f1.png Graphic file (type png)
 <use resultados_versao_final/q2_curva_aprendizagem_f1.png>
-Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  used on input line 580.
+Package pdftex.def Info: resultados_versao_final/q2_curva_aprendizagem_f1.png  used on input line 638.
 (pdftex.def)             Requested size: 415.12572pt x 136.39847pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 1253) has occurred while \output is active []
 
 
 
@@ -583,19 +596,19 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[13 <./resultados_versao_final/q2_nemenyi.png> <./resultados_versao_final/q2_postos_medios.png>]
+[14 <./resultados_versao_final/q2_nemenyi.png> <./resultados_versao_final/q2_postos_medios.png>]
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[14 <./resultados_versao_final/q2_curva_aprendizagem_f1.png>]
+[15 <./resultados_versao_final/q2_curva_aprendizagem_f1.png>]
 
 Package fancyhdr Warning: \footskip is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[15
+[16
 
 ]
 
@@ -603,7 +616,7 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[16] (main.bbl)
+[17] (main.bbl
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -612,24 +625,30 @@ Package fancyhdr Warning: \footskip is too small (12.0pt):
 (fancyhdr)                Make it at least 13.3pt, for example:
 (fancyhdr)                \setlength{\footskip}{13.3pt}.
 
-[17] (main.aux)
+[18])
+
+Package fancyhdr Warning: \footskip is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.3pt, for example:
+(fancyhdr)                \setlength{\footskip}{13.3pt}.
+
+[19] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8743 strings out of 469628
- 139757 string characters out of 5466582
- 599936 words of memory out of 5000000
+ 8733 strings out of 469628
+ 139627 string characters out of 5466582
+ 601936 words of memory out of 5000000
  37048 multiletter control sequences out of 15000+600000
- 647793 words of font info for 202 fonts, out of 8000000 for 9000
+ 647498 words of font info for 197 fonts, out of 8000000 for 9000
  162 hyphenation exceptions out of 8191
- 71i,13n,79p,1039b,494s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 71i,13n,79p,1039b,607s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1200.pk> </home/rozyelayny/.miktex/texmfs/data/fonts/pk/ljfour/jknappen/ec/dpi600/tctt1095.pk></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbx12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmex10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi6.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmmi8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmr8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy7.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmsy8.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmti12.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt10.pfb></home/rozyelayny/.miktex/texmfs/install/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on main.pdf (17 pages, 1581423 bytes).
+Output written on main.pdf (19 pages, 1583781 bytes).
 PDF statistics:
- 181 PDF objects out of 1000 (max. 8388607)
+ 188 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  43054 words of extra memory for PDF output out of 51595 (max. 10000000)
 

@@ -376,17 +376,18 @@ muito assimétrica. Também mostra que um índice interno alto, a silhueta, não
 com as classes conhecidas.
 
 \newpage
-\subsection{Questão 2}
-
-\subsubsection*{Versões da base}
+\subsection{Questão 2}\mbox{}\\
+\textbf{Versões da base}
 \begin{itemize}
-\item \textbf{V1 (original):} classe \texttt{is\_spam}, com as 2 classes a priori (2788
-  não-spam e 1813 spam);
-\item \textbf{V2 (clusters):} classe dada pelo grupo do double k-means com $K^*=2$
+
+
+\item V1 (original): classe \texttt{is\_spam}, com as 2 classes a priori (2788
+  não-spam e 1813 spam); \\
+\item V2 (clusters): classe dada pelo grupo do double k-means com $K^*=2$
   (Questão~1), com 4567 e 34 exemplos.
 \end{itemize}
 
-\subsubsection*{Classificadores}
+\noindent \textbf{Classificadores}
 Nos três classificadores bayesianos, um exemplo $x_k$ é atribuído à classe de maior
 probabilidade a posteriori,
 $P(\omega_i\mid x_k)=p(x_k\mid\omega_i)P(\omega_i)/\sum_{r}p(x_k\mid\omega_r)P(\omega_r)$, com
@@ -432,7 +433,7 @@ Por fim, no voto majoritário, cada um dos quatro classificadores anteriores vot
 vence a mais votada. Com quatro votantes pode dar 2 a 2, e aí desempatamos pela maior posteriori
 média dos quatro, em vez de sortear.
 
-\subsubsection*{Organização dos experimentos}
+\noindent \textbf{Organização dos experimentos}
 A comparação foi feita por validação cruzada estratificada $30\times10$-folds. Em cada uma das 30
 repetições, com uma semente diferente, a base foi dividida em 10 folds que preservam a proporção
 das classes. Cada fold foi usado uma vez como teste, com os outros 9 formando o conjunto de
@@ -463,7 +464,7 @@ classe positiva natural, então usamos a média \emph{macro} entre os dois grupo
 peso a cada um independentemente do tamanho. Se usássemos a média ponderada pelo tamanho, o grupo
 de 34 e-mails praticamente não influenciaria as métricas.
 
-\subsubsection*{Hiper-parâmetros selecionados}
+\noindent \textbf{Hiper-parâmetros selecionados}
 A Tabela~\ref{tab:hp} traz os valores escolhidos com mais frequência nos 300 folds externos, e a
 Figura~\ref{fig:hp} mostra a F-measure média da validação interna para cada valor testado.
 
@@ -492,7 +493,7 @@ Reg. logística & $C=10$ (122); $C=100$ (95) & $C=0{,}1$ (176); $C=1$ (120) \\
 \label{fig:hp}
 \end{figure}
 
-\subsubsection*{Estimativas pontuais e intervalos de confiança}
+\noindent \textbf{Estimativas pontuais e intervalos de confiança}
 Para cada classificador e métrica, calculamos a média dos 10 folds de cada repetição, o que dá
 30 valores. A estimativa pontual é a média desses 30 valores, e o intervalo de confiança de 95\%
 é $\bar m \pm t_{0{,}975;29}\, s/\sqrt{30}$. Trabalhamos com as médias por repetição, e não com
@@ -557,7 +558,7 @@ com exceção do gaussiano (4,6\% de erro e F-measure 0,587). No caso dele, o pr
 estimar uma matriz de covariância $57\times57$ com cerca de 31 exemplos de treino da classe
 minoritária, uma estimativa mal condicionada.
 
-\subsubsection*{Teste de Friedman e pós-teste de Nemenyi}
+\noindent \textbf{Teste de Friedman e pós-teste de Nemenyi.}
 Seguimos a metodologia de \citeonline{demsar2006}. Para cada versão da base e cada métrica, os
 blocos são as 30 repetições e os tratamentos são os 5 classificadores. Em cada repetição, os
 classificadores são ordenados, com posto 1 para o melhor, e o teste compara os postos médios. Por
